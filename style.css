@@ -1,0 +1,122 @@
+html {
+  color: #000000 ;
+  font-size: 1rem ;
+  line-height: 1.4 ;
+  background-image: url(hello-kitty-background.jpg) ;
+}
+body {
+  margin: 40px ;
+}
+
+h1 {
+  position: absolute ;
+  top: 15px ;
+  right: 540px ;
+  padding: 40px ;
+  color: #FFFFFF ;
+  text-align: center;
+  text-shadow: 2px 2px 5px #000;
+  background-color: #ff62c9 ;
+  font-family: Chivo, sans-serif;
+}
+
+h2 {
+  position: absolute ;
+  top: 150px ;
+  right: 520px ;
+  text-align: center ;
+  font-family: Chivo, sans-serif;
+}
+
+.header-image {
+  position: absolute ;
+  top: 15px ;
+  right: 300px ;
+}
+
+#navigation {
+  display: inline ;
+  font-family: Chivo, sans-serif;
+  font-size: 1rem ;
+  position: absolute ;
+  padding: 30px ;
+  top:160px ;
+  right: 600px;
+  text-align: center ;
+
+}
+
+#bar li{
+  display: inline ;
+}
+
+.cat-image {
+  position: absolute;
+  left: 15px ;
+  top: 15px;
+  font-family: Chivo, sans-serif ;
+  text-align: center;
+}
+
+.profile-picture {
+  position: absolute;
+  right: 15px ;
+  top: 75px ;
+  font-family: Chivo, sans-serif;
+  text-align: center;
+}
+
+.drop-down {
+  position: absolute;
+  padding: 20px ;
+  left: 500px ;
+  top: 700px ;
+  background-color: #FFFFFF;
+  font-family: Chivo, sans-serif;
+  text-align: center ;
+}
+
+.animation {
+  position: absolute;
+  top: 250px ;
+  right: 365px ;
+  text-align: center ;
+  font-family: Chivo, sans-serif;
+}
+
+.details {
+  position: relative;
+  right: 40px;
+  top: 630px ;
+  padding-left: 40px;
+  padding-bottom: 10px;
+  line-height: 1rem;
+  font-family: Chivo, sans-serif;
+  font-size: .85rem;
+  text-align: left;
+}
+
+.playlist {
+  position: absolute;
+  right: 40px;
+  top: 470px;
+}
+#web-ring {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  padding: 15px;
+  background-color: rgb(52, 86, 228);
+  border: solid 2px white;
+  font-family: sans-serif;
+}
+
+#web-ring a:link {
+  color: white;
+  text-decoration: none;
+}
+
+#web-ring a:hover {
+  text-decoration: underline;
+}
+/* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/nature/nat-4/nat386.ani), url(https://cur.cursors-4u.net/nature/nat-4/nat386.png), auto !important;} /* End https://www.cursors-4u.com */

@@ -4,13 +4,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width-device-width, intial-scale=1.0">
   <title>maggie's homepage</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Chivo&display=swap" rel="stylesheet">
   </head>
   <body>
+
+    <nav id="web-ring">
+      <a href="https://sophiamarret.github.io">https://sophiamarret.github.io</a>
+    </nav>
+
     <header>
       <h1>maggie's homepage</h1>
       <h2>my name is maggie and i love my cat!</h2>
-      <nav>
-        <ul>
+      <figure class="header-image">
+        <img src="custom.gif" alt="butterfly" width="200">
+      </figure>
+      <nav id="navigation">
+        <ul id="bar">
           <li><a href="/">home</a></li>
           <li><a href="/about.html">about</a></li>
           <li><a href="/contact.html">contact</a></li>
@@ -20,30 +30,42 @@
     </header>
 
     <main>
-      <figure>
+
+      <figure class="cat-image">
         <img src="mr-fluffy2.jpg" alt="cat" width= "300">
         <figcaption>my grumpy cat yawning</figcaption>
       </figure>
-      <figure>
+
+      <figure class="profile-picture">
         <img src="me.JPG" alt="me with sunglasses" width="300">
         <figcaption>me with sunglasses on</figcaption>
       </figure>
-      <details>
+
+      <details class="drop-down">
           <summary>my favorite tv shows</summary>
           my favorite tv shows right now are chowder, real housewives of atlanta, and my cat from hell.
       </details>
-      <section>
+
+      <section class="animation">
         <video src="animation-2.webm" height="400" controls
           autoplay loop muted preload="auto">
           <p>Your browser doesn't support HTML5 video.</p>
         </video>
         <p>my favorite animation i've made</p>
       </section>
-      <p> a website i visit most often is
-        <a href="https://animalcrossing.fandom.com/wiki/Animal_Crossing_Wiki">the animal crossing wiki</a>.
-      </p>
-      <p>the first website i remember using is
-        <a href="https://www.webkinz.com/">webkinz</a>.
-      </p>
-      <p>my favorite wikipedia page is
-        <a href="https://en.wikipedia.org/wiki/The_Real_Housewives_of_Atlanta">the real housewives of atlanta</a>.
+
+        <p class="details"> a website i visit most often is
+          <a href="https://animalcrossing.fandom.com/wiki/Animal_Crossing_Wiki">the animal crossing wiki</a>.
+        </p>
+        <p class="details">the first website i remember using is
+          <a href="https://www.webkinz.com/">webkinz</a>.
+        </p>
+        <p class="details">my favorite wikipedia page is
+          <a href="https://en.wikipedia.org/wiki/The_Real_Housewives_of_Atlanta">the real housewives of atlanta</a>.
+        </p>
+
+        <iframe class="playlist" src="https://open.spotify.com/embed/playlist/1gKa0bM3bHLua4PxQAxXGk" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+
+  </main>
+</body>
