@@ -24,6 +24,24 @@ h2 {
   text-align: center ;
   font-family: Chivo, sans-serif;
 }
+#web-ring {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  padding: 15px;
+  background-color: rgb(52, 86, 228);
+  border: solid 2px white;
+  font-family: sans-serif;
+}
+
+#web-ring a:link {
+  color: white;
+  text-decoration: none;
+}
+
+#web-ring a:hover {
+  text-decoration: underline;
+}
 
 .header-image {
   position: relative ;
@@ -84,24 +102,7 @@ h2 {
   position: relative;
   
 }
-#web-ring {
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  padding: 15px;
-  background-color: rgb(52, 86, 228);
-  border: solid 2px white;
-  font-family: sans-serif;
-}
 
-#web-ring a:link {
-  color: white;
-  text-decoration: none;
-}
-
-#web-ring a:hover {
-  text-decoration: underline;
-}
 
 .fireflies {
   width: 400px;
