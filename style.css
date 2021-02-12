@@ -10,6 +10,7 @@ body {
 
 h1 {
   position: relative;
+  width: 200px;
   padding: 40px ;
   color: #FFFFFF ;
   text-align: center;
@@ -20,7 +21,7 @@ h1 {
 
 h2 {
   position: relative ;
-  
+  width: 200px;
   text-align: center ;
   font-family: Chivo, sans-serif;
 }
