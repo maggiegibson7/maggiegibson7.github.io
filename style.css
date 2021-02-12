@@ -9,9 +9,7 @@ body {
 }
 
 h1 {
-  position: absolute ;
-  top: 15px ;
-  right: 540px ;
+  position: relative;
   padding: 40px ;
   color: #FFFFFF ;
   text-align: center;
@@ -21,27 +19,24 @@ h1 {
 }
 
 h2 {
-  position: absolute ;
-  top: 150px ;
-  right: 520px ;
+  position: relative ;
+  
   text-align: center ;
   font-family: Chivo, sans-serif;
 }
 
 .header-image {
-  position: absolute ;
-  top: 15px ;
-  right: 300px ;
+  position: relative ;
+  
 }
 
 #navigation {
   display: inline ;
   font-family: Chivo, sans-serif;
   font-size: 1rem ;
-  position: absolute ;
+  position: relative ;
   padding: 30px ;
-  top:160px ;
-  right: 600px;
+  
   text-align: center ;
 
 }
@@ -51,43 +46,32 @@ h2 {
 }
 
 .cat-image {
-  position: absolute;
-  left: 15px ;
-  top: 15px;
+  position: relative;
+  
   font-family: Chivo, sans-serif ;
   text-align: center;
 }
 
 .profile-picture {
-  position: absolute;
-  right: 15px ;
-  top: 75px ;
+  position: relative;
   font-family: Chivo, sans-serif;
   text-align: center;
 }
 
 .drop-down {
-  position: absolute;
-  padding: 20px ;
-  left: 500px ;
-  top: 700px ;
-  background-color: #FFFFFF;
-  font-family: Chivo, sans-serif;
-  text-align: center ;
+  width: 200px;
 }
 
 .animation {
-  position: absolute;
-  top: 250px ;
-  right: 365px ;
+  position: relative;
+  
   text-align: center ;
   font-family: Chivo, sans-serif;
 }
 
 .details {
   position: relative;
-  right: 40px;
-  top: 630px ;
+  
   padding-left: 40px;
   padding-bottom: 10px;
   line-height: 1rem;
@@ -97,9 +81,8 @@ h2 {
 }
 
 .playlist {
-  position: absolute;
-  right: 40px;
-  top: 470px;
+  position: relative;
+  
 }
 #web-ring {
   position: fixed;
@@ -118,5 +101,10 @@ h2 {
 
 #web-ring a:hover {
   text-decoration: underline;
+}
+
+.fireflies {
+  width: 400px;
+  height: 400px;
 }
 /* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/nature/nat-4/nat386.ani), url(https://cur.cursors-4u.net/nature/nat-4/nat386.png), auto !important;} /* End https://www.cursors-4u.com */
