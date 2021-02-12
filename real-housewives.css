@@ -6,6 +6,11 @@ body {
 
 .sidebar {
     grid-area: sidebar;
+    background-color: #FFB6C1;
+    padding: 10px;
+    border-style: solid;
+    border-color: #000;
+
   }
 
   .content {
@@ -47,6 +52,9 @@ body {
   color: #FFFFFF;
   text-align: center;
   align-content: center;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: black;
 
 }
 
@@ -55,6 +63,7 @@ body {
   font-family: Chivo, sans-serif;
   font-size: 1rem ;
   text-align: center;
+
 }
 
 #navigation a {
@@ -62,7 +71,11 @@ body {
 }
 
 #bar li{
+  background-color: #FFB6C1;
   display: inline;
+   padding: 10px;
+  border-style: solid;
+  border-color: #000000;
 }
 
 h1 {
