@@ -1,0 +1,81 @@
+html {
+  margin: 100px;
+  color: #FFFFFF;
+  background-color: #000000 ;
+  max-width: 56em;
+  padding: 1em 0;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+@font-face {
+    font-family: 'goozetteregular';
+    src: url('fonts/goozette_2-webfont.woff2') format('woff2'),
+         url('fonts/goozette_2-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'elasticelastic';
+    src: url('fonts/barlow-elasticc-webfont.woff2') format('woff2'),
+         url('fonts/barlow-elasticc-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 30vw 30vw 10vw;
+  grid-gap: 1em;
+}
+
+header,
+footer {
+  grid-column: 1 / span 5;
+  padding: 20px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: white;
+}
+
+main {
+  grid-column: 1 / span 3;
+}
+
+aside {
+  grid-column: span 2;
+}
+
+.green {
+  color: #14ff65;
+}
+
+.red {
+  color: #ff0000;
+}
+
+
+
+h1 {
+  font-family: 'goozetteregular';
+  font-size: 2rem;
+  color: #fff;
+  line-height: 2rem;
+}
+
+h2 {
+  font-family: 'goozetteregular';
+  font-size: 1.7rem;
+  color: #ff0000;
+  line-height:1rem;
+}
+
+h3 {
+  font-family: 'Cute Font', cursive;
+  font-size: 1.3rem;
+  line-height: .7rem;
+  text-align: right;
+}
