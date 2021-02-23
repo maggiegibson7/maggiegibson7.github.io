@@ -43,6 +43,8 @@ footer {
   box-sizing: border-box;
   display: grid;
   background-color: black;
+  block-size: fit-content;
+  height: fit-content;
 }
 
 main {
@@ -87,17 +89,23 @@ h3 {
     border-color: white;
     padding: 20px;
     display: inline;
-    font-size: 6vw;
+    font-size: 4vw;
     overflow: none;
+    block-size: fit-content;
   }
     main {
       border-radius: 2px;
       border-color: white;
       padding: 2px;
-      font-size: 4vw;
-      line-height: 5vw;
+      font-size: 7vw;
+      line-height: 9vw;
       grid-column: 1 / span 5;
     }
-
+    h3 {
+      font-size: 9vw;
+    }
+    h1 {
+      font-size: 6vw;
+    }
   }
 }
