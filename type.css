@@ -1,12 +1,13 @@
 html {
-  margin: 100px;
+  margin: 2em;
   color: #FFFFFF;
-  background-color: #000000 ;
+  background-image: url(blue-grid.jpg) ;
+  background-size: cover;
   max-width: 56em;
   padding: 1em 0;
   font-family: 'Roboto Mono', monospace;
-  font-size: 1.5rem;
-  line-height: 1.5rem;
+  font-size: 2vw;
+  line-height: 2.5vw;
 }
 
 @font-face {
@@ -39,6 +40,9 @@ footer {
   border-radius: 10px;
   border-style: solid;
   border-color: white;
+  box-sizing: border-box;
+  display: grid;
+  background-color: black;
 }
 
 main {
@@ -61,21 +65,39 @@ aside {
 
 h1 {
   font-family: 'goozetteregular';
-  font-size: 2rem;
+  font-size: 6vw;
   color: #fff;
-  line-height: 2rem;
 }
 
 h2 {
   font-family: 'goozetteregular';
-  font-size: 1.7rem;
+  font-size: 5vw;
   color: #ff0000;
-  line-height:1rem;
 }
 
 h3 {
   font-family: 'Cute Font', cursive;
-  font-size: 1.3rem;
-  line-height: .7rem;
+  font-size: 4vw;
   text-align: right;
+}
+
+@media only screen and (max-width: 767px) {
+  header {
+    border-radius: 3px;
+    border-color: white;
+    padding: 20px;
+    display: inline;
+    font-size: 6vw;
+    overflow: none;
+  }
+    main {
+      border-radius: 2px;
+      border-color: white;
+      padding: 2px;
+      font-size: 4vw;
+      line-height: 5vw;
+      grid-column: 1 / span 5;
+    }
+
+  }
 }
