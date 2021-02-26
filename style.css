@@ -2,29 +2,22 @@ html {
   color: #000000 ;
   font-size: 1rem ;
   line-height: 1.4 ;
-  background-image: url(hello-kitty-background.jpg) ;
-}
-body {
-  margin: 40px ;
+  background-image: url(stars.jpg) ;
 }
 
 h1 {
-  position: relative;
-  width: 200px;
-  padding: 40px ;
-  color: #FFFFFF ;
-  text-align: center;
-  text-shadow: 2px 2px 5px #000;
-  background-color: #ff62c9 ;
-  font-family: Chivo, sans-serif;
+  font-family: 'Chivo', sans-serif;
+  font-size: 3em;
+  text-shadow: 2px 2px 8px black;
 }
 
-h2 {
-  position: relative ;
-  width: 200px;
-  text-align: center ;
-  font-family: Chivo, sans-serif;
+header {
+  text-align: center;
+  align-content: center;
+  font-family: 'Chivo', sans-serif;
 }
+
+
 #web-ring {
   position: fixed;
   top: 15px;
@@ -46,7 +39,7 @@ h2 {
 
 .header-image {
   position: relative ;
-  
+
 }
 
 #navigation {
@@ -54,8 +47,7 @@ h2 {
   font-family: Chivo, sans-serif;
   font-size: 1rem ;
   position: relative ;
-  padding: 30px ;
-  
+
   text-align: center ;
 
 }
@@ -64,49 +56,119 @@ h2 {
   display: inline ;
 }
 
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr, 1fr;
+}
+
 .cat-image {
-  position: relative;
-  
-  font-family: Chivo, sans-serif ;
+  padding: 10px;
+  grid-column: 1;
+  grid-row: 1;
+  border-style: solid;
+  border-width: medium;
+  border-color: white;
+  background-color: #dcd0ff;
+  align-content: center;
   text-align: center;
+  font-family: 'Chivo', sans-serif;
+  font-size: 1em;
 }
 
 .profile-picture {
-  position: relative;
-  font-family: Chivo, sans-serif;
+  padding: 10px;
+  grid-column: 2;
+  grid-row: 1;
+  border-style: solid;
+  border-width: medium;
+  border-color: white;
+  background-color: #dcd0ff;
+  align-content: center;
   text-align: center;
+  font-family: 'Chivo', sans-serif;
+  font-size: 1em;
 }
 
 .drop-down {
-  width: 200px;
-}
-
-.animation {
-  position: relative;
-  
-  text-align: center ;
-  font-family: Chivo, sans-serif;
+  padding: 10px;
+  grid-column: 3;
+  grid-row: 1;
+  border-style: solid;
+  border-width: medium;
+  border-color: white;
+  background-color: #dcd0ff;
+  align-content: center;
+  text-align: center;
+  font-family: 'Chivo', sans-serif;
+  font-size: 1em;
 }
 
 .details {
-  position: relative;
-  
-  padding-left: 40px;
-  padding-bottom: 10px;
-  line-height: 1rem;
-  font-family: Chivo, sans-serif;
-  font-size: .85rem;
-  text-align: left;
+  padding: 10px;
+  grid-column: 4;
+  grid-row: 1;
+  border-style: solid;
+  border-width: medium;
+  border-color: white;
+  background-color: #dcd0ff;
+  align-content: center;
+  text-align: center;
+  font-family: 'Chivo', sans-serif;
+  font-size: 1em;
+}
+
+.animation {
+  padding: 10px;
+  grid-column: 1 / span 2;
+  grid-row: 2;
+  border-style: solid;
+  border-width: medium;
+  border-color: white;
+  background-color: #dcd0ff;
+  align-content: center;
+  text-align: center;
+  font-family: 'Chivo', sans-serif;
+  font-size: 1em;
 }
 
 .playlist {
-  position: relative;
-  
+  padding: 10px;
+  grid-column: 3;
+  grid-row: 2;
+  border-style: solid;
+  border-width: medium;
+  border-color: white;
+  background-color: #dcd0ff;
+  align-content: center;
+  text-align: center;
+  font-family: 'Chivo', sans-serif;
+  font-size: 1em;
 }
 
-
 .fireflies {
-  width: 400px;
-  height: 400px;
+  padding: 10px;
+  grid-column: 4;
+  grid-row: 2;
+  border-style: solid;
+  border-width: medium;
+  border-color: white;
+  background-color: #dcd0ff;
+  align-content: center;
+  text-align: center;
+  font-family: 'Chivo', sans-serif;
+  font-size: 1em;
+}
+
+.image-1 {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.image-2 {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
 }
 /* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/nature/nat-4/nat386.ani), url(https://cur.cursors-4u.net/nature/nat-4/nat386.png), auto !important;} /* End https://www.cursors-4u.com */
