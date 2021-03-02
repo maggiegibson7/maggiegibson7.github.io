@@ -445,9 +445,15 @@ h3 {
     }
     h3 {
       font-size: 9vw;
+      line-height: 10vw;
     }
     h1 {
       font-size: 6vw;
+      line-height: 8vw;
+    }
+    h2{
+      font-size: 6vw;
+      line-height: 8vw;
     }
   .green {
     border: 2px solid #14ff65;
