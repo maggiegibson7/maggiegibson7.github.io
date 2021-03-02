@@ -325,7 +325,86 @@ html {
     width: 100%;
   }
 }
+.nineteen {
+  text-indent: 20%;
+  animation-duration: 16s;
+  animation-name: slidein;
+  }
+  @keyframes slidein {
+    from {
+    margin-left: 100%;
+    width: 300%;
+    }
 
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+.twenty {
+  text-indent: 20%;
+  animation-duration: 16s;
+  animation-name: slidein;
+  }
+  @keyframes slidein {
+    from {
+    margin-left: 100%;
+    width: 300%;
+    }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+.twenty-one {
+  text-indent: 20%;
+  animation-duration: 16s;
+  animation-name: slidein;
+  }
+  @keyframes slidein {
+    from {
+    margin-left: 100%;
+    width: 300%;
+    }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+.twenty-two {
+  text-indent: 20%;
+  animation-duration: 16s;
+  animation-name: slidein;
+  }
+  @keyframes slidein {
+    from {
+    margin-left: 100%;
+    width: 300%;
+    }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+.twenty-three {
+  text-indent: 20%;
+  animation-duration: 16s;
+  animation-name: slidein;
+  }
+  @keyframes slidein {
+    from {
+    margin-left: 100%;
+    width: 300%;
+    }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
 body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -418,6 +497,14 @@ h3 {
 .paragraph-two {
   display: inline-block;
   border: 2px solid #ff0000;
+}
+.paragraph-two:hover {
+  background-image: url(green-gradient1.jpg);
+  background-size: cover;
+}
+.paragraph-three {
+  display: inline-block;
+  border: 2px solid #14ff65;
 }
 .paragraph-two:hover {
   background-image: url(green-gradient1.jpg);
@@ -517,13 +604,19 @@ h3 {
   }
   .paragraph-one {
     display: inline-block;
-    border: 2px solid white;
+    border: 8px solid white;
     background-image: url(green-gradient1.jpg);
     background-size: cover;
     }
   .paragrah-two {
     display: inline-block;
-    border: 2px solid red;
+    border: 8px solid red;
+    background-image: url(green-gradient1.jpg);
+    background-size: cover;
+  }
+  .paragraph-three {
+    display: inline-block;
+    border: 8px solid #14ff65;
     background-image: url(green-gradient1.jpg);
     background-size: cover;
   }
