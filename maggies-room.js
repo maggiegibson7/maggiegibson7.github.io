@@ -3,9 +3,9 @@ console.log("maggie's room");
 var Airtable = require('airtable');
 Airtable.configure({
     endpointUrl: 'https://api.airtable.com',
-    apiKey: 'keyOvunAd4LXOhZPV'
+    apiKey: 'apike y'
 });
-var base = new Airtable({apiKey: 'keyOvunAd4LXOhZPV'}).base('appZs01OFTUEl5Txc');
+var base = new Airtable({apiKey: 'apikey'}).base('appZs01OFTUEl5Txc');
 
 base('room-decor').select({
     // Selecting the first 3 records in Grid view:
