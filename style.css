@@ -160,6 +160,11 @@ header {
   font-size: 1em;
 }
 
+.js-exercise {
+  grid-column: 4;
+  grid-row: 2;
+}
+
 .image-1 {
   width: 200px;
   height: 200px;
