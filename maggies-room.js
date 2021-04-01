@@ -1,39 +1,58 @@
-console.log("maggie's room");
+/* globals require */
+console.log("Hello, Airtable");
 
-var Airtable = require('airtable');
-Airtable.configure({
-    endpointUrl: 'https://api.airtable.com',
-    apiKey: 'apike y'
-});
-var base = new Airtable({apiKey: 'apikey'}).base('appZs01OFTUEl5Txc');
+// load the airtable library, call it "Airtable"
+var Airtable = require("airtable");
+console.log(Airtable);
 
-base('room-decor').select({
-    // Selecting the first 3 records in Grid view:
-    maxRecords: 3,
-    view: "Grid view"
-}).eachPage(function page(records, fetchNextPage) {
-    // This function (`page`) will get called for each page of records.
+// use the airtable librar to get a variable that represents one of our bases
+var base = new Airtable({apiKey: 'keyOvunAd4LXOhZPV'}).base('appZs01OFTUEl5Txc');
 
-    records.forEach(function(record) {
-        console.log('Retrieved', record.get('title'));
-    });
+//get the "books" table from the base, select ALL the records, and specify the functions that will receive the data
+base("room").select({}).eachPage(gotPageOfRooms, gotAllRooms);
 
-    // To fetch the next page of records, call `fetchNextPage`.
-    // If there are more records, `page` will get called again.
-    // If there are no more records, `done` will get called.
-    fetchNextPage();
+// an empty array to hold our book data
+const room = [];
 
-}, function done(err) {
-    if (err) { console.error(err); return; }
-});
+// callback function that receives our data
+function gotPageOfRooms(records, fetchNextPage) {
+  console.log("gotPageOfRooms()");
+  // add the records from this page to our books array
+  room.push(...records);
+  // request more pages
+  fetchNextPage();
+}
 
-// If you only want the first page of records, you can
-// use `firstPage` instead of `eachPage`.
-base('room-decor').select({
-    view: 'Grid view'
-}).firstPage(function(err, records) {
-    if (err) { console.error(err); return; }
-    records.forEach(function(record) {
-        console.log('Retrieved', record.get('title'));
-    });
-});
+// call back function that is called when all pages are loaded
+function gotAllRooms(err) {
+  console.log("gotAllRooms()");
+
+  // report an error, you'd want to do something better than this in production
+  if (err) {
+    console.log("error loading room");
+    console.error(err);
+    return;
+  }
+
+  // call functions to log and show the books
+  consoleLogRoom();
+  showRooms();
+}
+
+// just loop through the books and console.log them
+function consoleLogRooms() {
+  console.log("consoleLogRooms()");
+  rooms.forEach((room) => {
+    console.log("Room:", room);
+  });
+}
+
+// loop through the books, create an h2 for each one, and add it to the page
+function showRooms() {
+  console.log("showRooms()");
+  rooms.forEach((room) => {
+    const h2 = document.createElement("h2");
+    h2.innerText = room.fields.title;
+    document.body.appendChild(h2);
+  });
+}
