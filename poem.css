@@ -8,7 +8,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: hsl(150, 50%, 70%);
+	background-color: hsl(240, 50%, 70%);
 	transition: background-color .25s ease-in-out;
 }
 
