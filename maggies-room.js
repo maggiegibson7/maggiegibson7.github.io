@@ -9,7 +9,7 @@ console.log(Airtable);
 var base = new Airtable({apiKey: 'keyOvunAd4LXOhZPV'}).base('appZs01OFTUEl5Txc');
 
 //get the "books" table from the base, select ALL the records, and specify the functions that will receive the data
-base("room").select({}).eachPage(gotPageOfRooms, gotAllRooms);
+base("room").select({}).eachPage(gotPageOfRoom, gotAllRooms);
 
 // an empty array to hold our book data
 const room = [];
