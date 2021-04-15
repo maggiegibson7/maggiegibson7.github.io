@@ -22,7 +22,7 @@ html {
 
 @font-face {
 	font-family: "maggie";
-	src: url("maggie.ttf");
+	src: url("fonts/maggie.ttf");
 }
 
 .title {
