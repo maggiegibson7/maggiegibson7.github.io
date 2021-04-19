@@ -63,7 +63,8 @@ function showTables() {
     document.querySelector('.song-list').appendChild(myElement);
     myElement.appendChild(h2);
 
-    myElement.setAttribute("class", song.fields['Rating']);
+    //myElement.setAttribute("class", song.fields['Rating']);
+    myElement.dataset.rating = song.fields['Rating'];
 
     
   myElement.classList.add("song-grid");
@@ -79,46 +80,140 @@ function showTables() {
   albumCover.src = song.fields['Song Cover'][0].thumbnails.small.url;
   myElement.appendChild(albumCover);
 
+  albumCover.addEventListener('click', () => showCircles(albumCover));
+  albumCover.addEventListener('click', () => playSound(song.fields['Audio'][0].url)); 
+  //
+
   });
 
+function filterOneStar() {
+  //document.getElementsByClassName('.1 song-grid')[0].style.display = "block";
+  //document.getElementsByClassName('.2 song-grid')[0].style.display = "none";
+  //document.getElementsByClassName('.3 song-grid')[0].style.display = "none";
+  //document.getElementsByClassName('.4 song-grid')[0].style.display = "none";
+  //document.getElementsByClassName('.5 song-grid')[0].style.display = "none";
+  var songs = document.querySelectorAll('.song-grid');
+  songs.forEach((item) => {
+    if (item.dataset.rating == '1'){
+      item.style.display = "block";
+    } else {
+      item.style.display = "none";
+    }
+    document.querySelector(".title").innerText = "showing one star";
+  });
+}
 
+function filterTwoStar() {
+  var songs = document.querySelectorAll('.song-grid');
+  songs.forEach((item) => {
+    if (item.dataset.rating == '2'){
+      item.style.display = "block";
+    } else {
+      item.style.display = "none";
+    }
+    document.querySelector(".title").innerText = "showing two stars";
+  });
+}
+
+function filterThreeStar() {
+  var songs = document.querySelectorAll('.song-grid');
+  songs.forEach((item) => {
+    if (item.dataset.rating == '3'){
+      item.style.display = "block";
+    } else {
+      item.style.display = "none";
+    }
+    document.querySelector(".title").innerText = "showing three stars";
+  });
+}
+
+function filterFourStar() {
+  var songs = document.querySelectorAll('.song-grid');
+  songs.forEach((item) => {
+    if (item.dataset.rating == '4'){
+      item.style.display = "block";
+    } else {
+      item.style.display = "none";
+    }
+    document.querySelector(".title").innerText = "showing four stars";
+  });
+}
+
+function filterFiveStar() {
+  var songs = document.querySelectorAll('.song-grid');
+  songs.forEach((item) => {
+    if (item.dataset.rating == '5'){
+      item.style.display = "block";
+    } else {
+      item.style.display = "none";
+    }
+    document.querySelector(".title").innerText = "showing five stars";
+  });
+}
+
+function showAll() {
+    var songs = document.querySelectorAll('.song-grid');
+  songs.forEach((item) => {
+    item.style.display = "block";
+  });
+  document.querySelector(".title").innerText = "showing all";
+}
+
+
+document.querySelector("#one-star").addEventListener("click", filterOneStar);
+
+document.querySelector("#two-star").addEventListener("click", filterTwoStar);
+
+document.querySelector("#three-star").addEventListener("click", filterThreeStar);
+ 
+document.querySelector("#four-star").addEventListener("click", filterFourStar); 
+
+document.querySelector("#five-star").addEventListener("click", filterFiveStar);
+
+document.querySelector("#show-all").addEventListener("click", showAll);
+
+
+}
+
+var circles = document.querySelector(".sound-waves");
+circles.remove(); 
+
+var circlesExist = false;
+
+
+function showCircles(albumCover) {
+  if (circlesExist == false) {
+    albumCover.parentElement.appendChild(circles);
+    circlesExist = true;
+  } else {
+    circles.remove();
+    circlesExist = false;
   }
-document.getElementById("#one-star").addEventListener("click", function() {
-  document.getElementsbyClassName('.1 song-grid')[0].item.style.display = "block";
-  document.getElementsbyClassName('.2 song-grid')[0].item.style.display = "none";
-  document.getElementsbyClassName('.3 song-grid')[0].item.style.display = "none";
-  document.getElementsbyClassName('.4 song-grid')[0].item.style.display = "none";
-  document.getElementsbyClassName('.5 song-grid')[0].item.style.display = "none";
-});
+}
 
-document.getElementById("#two-star").addEventListener("click", function() {
-  document.getElementsbyClassName('.1 song-grid')[0].item.style.display = "none";
-  document.getElementsbyClassName('.2 song-grid')[0].item.style.display = "block";
-  document.getElementsbyClassName('.3 song-grid')[0].item.style.display = "none";
-  document.getElementsbyClassName('.4 song-grid')[0].item.style.display = "none";
-  document.getElementsbyClassName('.5 song-grid')[0].item.style.display = "none";
-});
+function playSound(url) {
+  audio.src=url;
+  if (isPlaying == 1) { //if the first audio is playing
+    audio.pause(); //pause the first audio
+    isPlaying = 0; //second click
+    //document.querySelector('.sound-waves').setAttribute("hidden", true); //show circles
+  } // if statement syntax: if(condition_expression){//true}else{false}
+  else if (isPlaying == 0) { //if no audio is playing
+    audio.play(); //play the first audio
+    isPlaying = 1;//first click
+    //document.querySelector('.sound-waves').removeAttribute("hidden"); //show circles
+  }
+ 
+}
 
-document.getElementById("#three-star").addEventListener("click", function() {
-  document.getElementsbyClassName('.1 song-grid')[0].item.style.display = "none";
-  document.getElementsbyClassName('.2 song-grid')[0].item.style.display = "none";
-  document.getElementsbyClassName('.3 song-grid')[0].item.style.display = "block";
-  document.getElementsbyClassName('.4 song-grid')[0].item.style.display = "none";
-  document.getElementsbyClassName('.5 song-grid')[0].item.style.display = "none";
-});
+var audio = document.createElement('audio'); 
+audio.style.display = "none";
 
-document.getElementById("#four-star").addEventListener("click", function() {
-  document.getElementsbyClassName('.1 song-grid')[0].item.style.display = "none";
-  document.getElementsbyClassName('.2 song-grid')[0].item.style.display = "none";
-  document.getElementsbyClassName('.3 song-grid')[0].item.style.display = "none";
-  document.getElementsbyClassName('.4 song-grid')[0].item.style.display = "block";
-  document.getElementsbyClassName('.5 song-grid')[0].item.style.display = "none";
-});
+var isPlaying = 0;
 
-document.getElementById("#five-star").addEventListener("click", function() {
-  document.getElementsbyClassName('.1 song-grid')[0].item.style.display = "none";
-  document.getElementsbyClassName('.2 song-grid')[0].item.style.display = "none";
-  document.getElementsbyClassName('.3 song-grid')[0].item.style.display = "none";
-  document.getElementsbyClassName('.4 song-grid')[0].item.style.display = "none";
-  document.getElementsbyClassName('.5 song-grid')[0].item.style.display = "block";
-});
+//document.querySelector('.sound-waves').setAttribute("hidden", true);
+
+
+
+
+  

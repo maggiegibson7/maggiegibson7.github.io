@@ -77,44 +77,7 @@ a:visited {
 	transition: .25s ease-in-out;
 }
 
-#image1 {
-	grid-column: 2;
-	grid-row: 1 / span 2;
-	font-family: Montserrat, sans-serif;
-	font-size: 1.3vw;
-	border: solid 2px white;
-	text-align: center;
-	font-weight: 600;
-	align-content: center;
-	animation-name: easein;
-	animation-duration: 3s;
-}
 
-#image2 {
-	grid-column: 3;
-	grid-row: 1 / span 2;
-	font-family: Montserrat, sans-serif;
-	font-size: 1.3vw;
-	border: solid 2px white;
-	text-align: center;
-	font-weight: 600;
-	align-content: center;
-	animation-name: easein;
-	animation-duration: 3s;
-}
-
-#image3 {
-	grid-column: 4;
-	grid-row: 1 / span 2;
-	font-family: Montserrat, sans-serif;
-	font-size: 1.3vw;
-	border: solid 2px white;
-	text-align: center;
-	font-weight: 600;
-	align-content: center;
-	animation-name: easein;
-	animation-duration: 3s;
-}
 
 @media screen and (max-width: 600px) {
 	.container {
@@ -152,39 +115,6 @@ a:visited {
 	text-decoration: none;
 	animation-name: easein;
 	animation-duration: 2s;
-	}
-
-	#image1 {
-	grid-column: 1;
-	grid-row: 3;
-	font-family: Montserrat, sans-serif;
-	font-size: 4vw;
-	border: solid 2px white;
-	text-align: center;
-	font-weight: 600;
-	align-content: center;
-	}
-
-	#image2 {
-	grid-column: 1;
-	grid-row: 4;
-	font-family: Montserrat, sans-serif;
-	font-size: 4vw;
-	border: solid 2px white;
-	text-align: center;
-	font-weight: 600;
-	align-content: center;
-	}
-
-	#image3 {
-	grid-column: 1;
-	grid-row: 5;
-	font-family: Montserrat, sans-serif;
-	font-size: 4vw;
-	border: solid 2px white;
-	text-align: center;
-	font-weight: 600;
-	align-content: center;
 	}
 
 	img {
@@ -228,32 +158,6 @@ a:visited {
 	text-decoration: none;
 	animation-name: easein;
 	animation-duration: 2s;
-	}
-
-	#image1 {
-	grid-column: 1;
-	grid-row: 3;
-	font-family: Montserrat, sans-serif;
-	font-size: 2.5vw;
-	border: solid 2px white;
-	text-align: center;
-	font-weight: 600;
-	align-content: center;
-	}
-
-	#image2 {
-	grid-column: 2;
-	grid-row: 3;
-	font-family: Montserrat, sans-serif;
-	font-size: 2.5vw;
-	border: solid 2px white;
-	text-align: center;
-	font-weight: 600;
-	align-content: center;
-	}
-
-	#image3 {
-	display: none;
 	}
 
 	img {
