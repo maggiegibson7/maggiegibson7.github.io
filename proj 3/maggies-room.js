@@ -66,10 +66,10 @@ function showTables() {
     //myElement.setAttribute("class", song.fields['Rating']);
     myElement.dataset.rating = song.fields['Rating'];
 
-    
+
   myElement.classList.add("song-grid");
   document.querySelector(".song-list").append(myElement);
-  
+
   var artistName = document.createElement("p");
   artistName.classList.add("artist-name")
   artistName.innerText = song.fields['Artist Name'];
@@ -77,11 +77,11 @@ function showTables() {
 
   var albumCover = document.createElement("img");
   albumCover.classList.add("album-cover");
-  albumCover.src = song.fields['Song Cover'][0].thumbnails.small.url;
+  albumCover.src = song.fields['Song Cover'][0].thumbnails.large.url;
   myElement.appendChild(albumCover);
 
   albumCover.addEventListener('click', () => showCircles(albumCover));
-  albumCover.addEventListener('click', () => playSound(song.fields['Audio'][0].url)); 
+  albumCover.addEventListener('click', () => playSound(song.fields['Audio'][0].url));
   //
 
   });
@@ -165,8 +165,8 @@ document.querySelector("#one-star").addEventListener("click", filterOneStar);
 document.querySelector("#two-star").addEventListener("click", filterTwoStar);
 
 document.querySelector("#three-star").addEventListener("click", filterThreeStar);
- 
-document.querySelector("#four-star").addEventListener("click", filterFourStar); 
+
+document.querySelector("#four-star").addEventListener("click", filterFourStar);
 
 document.querySelector("#five-star").addEventListener("click", filterFiveStar);
 
@@ -176,7 +176,7 @@ document.querySelector("#show-all").addEventListener("click", showAll);
 }
 
 var circles = document.querySelector(".sound-waves");
-circles.remove(); 
+circles.remove();
 
 var circlesExist = false;
 
@@ -203,17 +203,12 @@ function playSound(url) {
     isPlaying = 1;//first click
     //document.querySelector('.sound-waves').removeAttribute("hidden"); //show circles
   }
- 
+
 }
 
-var audio = document.createElement('audio'); 
+var audio = document.createElement('audio');
 audio.style.display = "none";
 
 var isPlaying = 0;
 
 //document.querySelector('.sound-waves').setAttribute("hidden", true);
-
-
-
-
-  

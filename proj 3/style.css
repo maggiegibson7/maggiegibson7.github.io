@@ -1,24 +1,93 @@
 html {
 	font-family: Montserrrat, sans-serif;
+	margin: 10px;
+	background: url(background-playlist.png) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size; cover;
+	align-content: center;
+}
+
+ul {
+	display: inline;
+}
+
+li {
+	display: inline;
+}
+
+button {
+	align-items: center;
+	color: white;
+	background-color: black;
+	width: 14vw;
+	font-size: 2vw;
+	font-family: Montserrat, sans-serif;
+}
+
+.title {
+	text-align: center
 }
 
 h2 {
 	font-family: Montserrat, sans-serif;
 }
 
+.album-cover {
+	z-index: 10;
+	max-width: 300px;
+	border-radius: 8px;
+	width: 15vw;
+	height: 15vw;
+	object-fit: cover;
+	align-content: center;
+	vertical-align: top;
+	align-self: center;
+}
+
+.artist-name {
+	font-family: Montserrat, sans-serif;
+	font-size: 2vw;
+}
+
 .song-list {
 	display: grid;
   align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: fit-content(25%) fit-content(25%) fit-content(25%) fit-content(25%);
+	grid-template-rows: auto;
+	grid-gap: 15px;
+	z-index: 2;
+	align-content: center;
+	align-items: center;
+	vertical-align: middle;
+}
+
+.song-grid {
+	border: solid 1px black;
+	border-radius: 8px;
+	align-content: center;
+	vertical-align: middle;
+	align-content: center;
+	color: black;
+	text-shadow: 2px 2px 2px white;
+	text-align: center;
+	padding: 5px;
+	z-index: 2;
+
 }
 
 .sound-waves {
-	grid-column: 2;
-	grid-row: 1;
-	vertical-align: middle;
-	align-content: center;
-	z-index: 1;
+	grid-row: auto;
+	grid-column: auto;
+	z-index: -1;
 	animation: waves 3s ease-in-out infinite alternate;
+	height: 100px;
+	width: 100px;
+	align-content: center;
+	vertical-align: top;
+	align-self: center;
+	position: sticky;
 }
 
 .circle1 {
@@ -86,6 +155,28 @@ h2 {
 
 @keyframes waves {
 	0% {transform: scale(0);}
-	50% {transform: scale(1.0);}
-	100% {transform: scale(2.0);}
+	50% {transform: scale(0.5);}
+	100% {transform: scale(1.0);}
+}
+
+@media screen and (max-width: 700px) {
+	.song-list {
+		grid-template-columns: minmax(240px, 1fr);
+	}
+	ul {
+		display: block;
+	}
+	li {
+		display: block;
+	}
+	button {
+		font-size: 6vw;
+		width: 300px;
+		border-radius: 8px;
+		align-content: center;
+		align-self: center;
+	}
+	.artist-name {
+		font-size: 4vw;
+	}
 }

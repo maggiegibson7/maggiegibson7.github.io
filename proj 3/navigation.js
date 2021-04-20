@@ -62,10 +62,10 @@ function shuffleMe() {
     //myElement.setAttribute("class", song.fields['Rating']);
     myElement.dataset.rating = songRandom.fields['Rating'];
 
-    
+
   myElement.classList.add("song-grid");
   document.body.append(myElement);
-  
+
   var artistName = document.createElement("p");
   artistName.classList.add("artist-name")
   artistName.innerText = songRandom.fields['Artist Name'];
@@ -73,13 +73,13 @@ function shuffleMe() {
 
   var albumCover = document.createElement("img");
   albumCover.classList.add("album-cover");
-  albumCover.src = songRandom.fields['Song Cover'][0].thumbnails.small.url;
+  albumCover.src = songRandom.fields['Song Cover'][0].thumbnails.large.url;
   myElement.appendChild(albumCover);
 
 }
 
 document.addEventListener("keydown", () => {
-  
+
   var songRandom = tables[Math.floor(Math.random()*tables.length)];
   var audio = document.createElement("audio");
   audio.src = songRandom.fields['Audio'][0].url;
@@ -89,8 +89,3 @@ document.addEventListener("keydown", () => {
   document.addEventListener("keydown", () => audio.pause());
   document.querySelector("button").addEventListener("click", () => audio.pause());
 })
-
-
-
-
-
