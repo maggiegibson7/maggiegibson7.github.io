@@ -5,12 +5,12 @@ html {
 	-o-background-size: cover;
 	background-size; cover;
 	transition: background-color .5s ease-in-out;
-	margin: 50px;
+	margin: 10px;
 }
 
 @font-face {
 	font-family: "maggie";
-	src: url("fonts/maggie.ttf");
+	src: url("maggie.ttf");
 }
 
 ul {
@@ -35,10 +35,11 @@ ul {
 	font-family: "maggie";
 	font-size: 8vw;
 	text-align: center;
-	vertical-align: center;
 	animation-name: easein;
 	animation-duration: 2s;
 	text-shadow: 2px 2px 5px #000;
+	margin-top: 0%;
+	line-height: 1.5rem;
 }
 
 @keyframes easein {
@@ -53,16 +54,42 @@ h2 {
 	color: white;
 }
 
+.instructions {
+	grid-column: 3 / span 5;
+	grid-row: 1;
+	align-content: center;
+	font-family: Montserrat, sans-serif;
+	margin-left: 4%;
+	font-size: 3vw;
+	margin-top: 30%;
+	text-align: center;
+	font-weight: 500;
+	text-shadow: 2px 2px 2px white;
+}
+
+button {
+	position: relative;
+	margin-right: 1px;
+	margin-top: 1px;
+	font-family: Montserrat, sans-serif;
+	font-size: 3vw;
+	color: white;
+	background-color: black;
+	border: 2px solid white;
+	border-radius: 8px;
+
+}
+
 
 
 #sidebar {
 	grid-column: 1 / span 2;
-	grid-row: 1 / span 2;
+	grid-row: 1;
 	align-content: center;
 	font-family: Montserrat, sans-serif;
 	font-size: 2.5vw;
 	text-align: center;
-	vertical-align: center;
+	vertical-align: middle;
 	animation-name: easein;
 	animation-duration: 2s;
 	color: white;
@@ -95,3 +122,40 @@ a:visited {
 	color: white;
 }
 
+@media screen and (max-width: 700px) {
+	html {
+		margin: 5px;
+	}
+	.container {
+		display: grid;
+		grid-template-columns: 1fr auto;
+		grid-template-rows: auto;
+	}
+	button {
+		display: none;
+	}
+	.instructions {
+		display: none;
+	}
+	#title {
+		grid-row: 1;
+		grid-column: 1;
+		font-size: 14vw;
+		line-height: 11vw;
+		text-align: center;
+	}
+	#sidebar {
+		grid-row: 2;
+		grid-column: 1;
+		align-content: center;
+		padding-left: 0;
+		padding-right: 0;
+		width: 100%;
+	}
+	#sidebar a:link {
+		font-size: 8vw;
+		line-height: 16vw;
+	}
+	h2 {
+		font-size: 15vw;
+	}

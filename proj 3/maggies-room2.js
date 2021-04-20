@@ -60,16 +60,16 @@ function shuffleMe() {
     myElement.appendChild(h2);
 
     //myElement.setAttribute("class", song.fields['Rating']);
-    
+
     var rating = document.createElement("p");
     rating.classList.add("rating");
     rating.innerText = "rating of " + songRandom.fields['Rating'];
     myElement.appendChild(rating);
 
-    
+
   myElement.id = ("last-song");
   document.body.append(myElement);
-  
+
   var artistName = document.createElement("p");
   artistName.classList.add("artist-name")
   artistName.innerText = songRandom.fields['Artist Name'];
@@ -77,7 +77,7 @@ function shuffleMe() {
 
   var albumCover = document.createElement("img");
   albumCover.classList.add("album-cover");
-  albumCover.src = songRandom.fields['Song Cover'][0].thumbnails.small.url;
+  albumCover.src = songRandom.fields['Song Cover'][0].thumbnails.large.url;
   myElement.appendChild(albumCover);
 
   var audioButton = document.createElement("button");
@@ -104,5 +104,3 @@ function hearSong() {
 }
 
 document.querySelector(".shuffle-me").addEventListener("click", shuffleMe);
-
-

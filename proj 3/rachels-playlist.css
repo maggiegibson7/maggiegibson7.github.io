@@ -8,36 +8,26 @@ html {
 	margin: 50px;
 }
 
-.container {
-	display: grid;
-	grid-template-columns: repeat(5, minmax(250px, 1fr));
-	grid-template-rows: repeat(5, 1fr);
-	grid-gap: 30px;
-	min-width: 100%;
-	min-height: 100%;
-	
-	align-content: center;
-	vertical-align: center;
-}
 
 @font-face {
 	font-family: "maggie";
-	src: url("fonts/maggie.ttf");
+	src: url("maggie.ttf");
 }
 
 .title {
-	grid-column-start: 2;
-	grid-column-end: 5;
-	grid-row:3;
+	margin-top: 15%;
 	align-content: center;
 	font-family: "maggie";
-	background-image: url(notebook-paper.png);
-	font-size: 2.5vw;
+	background-color: black;
+	color: white;
+	font-size: 8vw;
 	background-size: cover;
 	text-align: center;
 	vertical-align: center;
 	animation-name: easein;
 	animation-duration: 2s;
+	line-height: 5rem;
+	text-shadow: 4px 4px 4px black;
 }
 
 @keyframes easein {
@@ -47,18 +37,18 @@ html {
 }
 
 .button {
-	grid-column: 3;
-	grid-row: 4;
+	margin-top: 10%;
 	align-content: center;
 	vertical-align: center;
 	text-align: center;
-	font-family: "maggie";
+	font-family: Montserrat, sans-serif;
 	font-size: 4vw;
 	text-shadow: 2px 2px 5px #000;
 	color: black;
 	text-decoration: none;
 	animation-name: easein;
 	animation-duration: 2s;
+	line-height: 1.5rem;
 }
 
 a:link {
@@ -73,6 +63,7 @@ a:visited {
 
 .button:hover {
 	border-radius: 50%;
+	background-color: white;
 	border: solid 2px black;
 	transition: .25s ease-in-out;
 }
@@ -80,26 +71,13 @@ a:visited {
 
 
 @media screen and (max-width: 600px) {
-	.container {
-		display: grid;
-		grid-template-columns: auto;
-		grid-template-rows: auto;
-		grid-gap: 30px;
-		min-width: 100%;
-		min-height: 100%;
-		align-content: center;
-	}
 
 	.title {
-	grid-column: 1;
-	grid-row:1;
-	align-content: center;
 	font-family: "maggie";
-	background-image: url(notebook-paper.png);
-	font-size: 8vw;
-	background-size: cover;
+	font-size: 13vw;
 	text-align: center;
-	vertical-align: center;
+	vertical-align: middle;
+	line-height: 5rem;
 	}
 
 	.button {
@@ -108,8 +86,7 @@ a:visited {
 	align-content: center;
 	vertical-align: center;
 	text-align: center;
-	font-family: "maggie";
-	font-size: 6vw;
+	font-size: 9vw;
 	text-shadow: 2px 2px 5px #000;
 	color: black;
 	text-decoration: none;
@@ -163,6 +140,3 @@ a:visited {
 	img {
 		max-width: 250px;
 	}
-
-
-
