@@ -1,0 +1,102 @@
+html {
+	font-family: Montserrrat, sans-serif;
+	margin: 10px;
+	background: url(background-playlist.png) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size; cover;
+	align-content: center;
+}
+
+@font-face {
+	font-family: "maggie";
+	src: url("maggie.ttf");
+}
+
+#home-button a:link {
+	color: white;
+	text-decoration: none;
+}
+
+#home-button a:visited {
+	color: white;
+	text-decoration: none;
+}
+
+.title {
+  font-family: "maggie";
+  font-size: 6vw;
+  line-height: 1.5rem;
+  text-shadow: 2px 2px 2px white;
+  border: 2px solid black;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.instructions {
+  font-family: Montserrat, sans-serif;
+  font-size: 2vw;
+  text-align: center;
+  color: black;
+  border: 2px dashed white;
+  border-radius: 8px;
+  font-weight: 500;
+  text-shadow: 2px 2px 2px white;
+  line-height: 1rem;
+}
+
+button {
+  position: relative;
+  font-size: 3vw;
+  background-color: black;
+  border-radius: 8px;
+  border: 2px solid white;
+  color: white;
+  font-family: Montserrat, sans-serif;
+  align-self: center;
+  align-content: center;
+  width: 100%;
+}
+
+#last-song {
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+}
+
+h2 {
+  font-family: Montserrat, sans-serif;
+  text-shadow: 2px 2px 2px white;
+}
+
+.album-cover {
+	z-index: 10;
+	border-radius: 8px;
+	width: 27vw;
+	height: 27vw;
+	object-fit: cover;
+	align-content: center;
+	vertical-align: top;
+	align-self: center;
+}
+
+@media screen and (max-width: 700px) {
+  .title {
+    font-size: 9vw;
+  }
+  .instructions {
+    font-size: 5vw;
+    line-height: 1.2rem;
+  }
+  button {
+    font-size: 5vw;
+    height: 11vw;
+  }
+  #last-song {
+    font-weight: 500;
+    font-size: 5.5vw;
+  }
+  .album-cover {
+    width: 45vw;
+    height: 40vw;
+  }
