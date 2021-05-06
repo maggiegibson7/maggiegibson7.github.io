@@ -20,6 +20,9 @@ h1 {
   		50% {  opacity: 100%; }
   		100% {  opacity: 70%; }
 	}
+img:hover {
+	cursor: move;
+}
 
 h2 {
 	color: white;

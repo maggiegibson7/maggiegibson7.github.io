@@ -13,6 +13,9 @@ img {
 	max-height: 70%;
 	animation: blah 5s ease-in-out infinite alternate;
 }
+img:hover {
+	cursor: move;
+}
 h1 {
 	display: none;
 }
