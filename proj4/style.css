@@ -12,6 +12,9 @@ img {
 	max-width: 50%;
 	max-height: 70%;
 }
+h1 {
+	display: none;
+}
 
 h2 {
 	color: white;
@@ -59,7 +62,15 @@ a:visited {
 		font-size: 4vw;
 	}
 	h2 {
-		font-size: 7vw;
+		display: none;
+	}
+	h1{
+		display: flex;
+		font-size: 8vw;
+		color: white;
+	text-shadow: black 4px 4px 2px;
+	text-align: center;
+
 	}
 	.screenshot {
 		display: none;
