@@ -45,6 +45,13 @@ a:visited {
 	img {
 		max-width: 70%;
 		max-height: 90%;
+		animation: blah 5s ease-in-out infinite alternate;
+	}
+
+	@keyframes blah {
+		0% {  opacity: 70%;}
+  		50% {  opacity: 100%; }
+  		100% {  opacity: 70%; }
 	}
 	button {
 		font-size: 4vw;

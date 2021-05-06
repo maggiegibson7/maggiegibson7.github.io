@@ -46,6 +46,34 @@ a:visited {
 		max-width: 70%;
 		max-height: 90%;
 	}
+
+	#img1 {
+		animation: blah 5s ease-in-out infinite alternate;
+	
+	}
+
+	#img2 {
+		animation: blahtwo 5s ease-in-out infinite alternate;
+		
+	}
+
+	#img3 {
+		animation: blahtwo 5s ease-in-out infinite alternate;
+	
+	}
+
+	#img4 {
+		animation: blah 5s ease-in-out infinite alternate;
+		
+	}
+
+	@keyframes blah {
+		0% {  opacity: 70%;}
+  		50% {  opacity: 100%; }
+  		100% {  opacity: 70%; }
+	}
+
+	}
 	button {
 		font-size: 4vw;
 	}
