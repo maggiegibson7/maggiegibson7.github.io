@@ -10,10 +10,16 @@ html {
 img {
 	position: absolute;
 	max-width: 30%;
+	animation: blah 5s ease-in-out infinite alternate;
 }
 h1 {
 	display: none;
 }
+@keyframes blah {
+		0% {  opacity: 70%;}
+  		50% {  opacity: 100%; }
+  		100% {  opacity: 70%; }
+	}
 
 h2 {
 	color: white;

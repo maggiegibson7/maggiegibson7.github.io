@@ -11,6 +11,7 @@ img {
 	position: absolute;
 	max-width: 50%;
 	max-height: 70%;
+	animation: blah 5s ease-in-out infinite alternate;
 }
 h1 {
 	display: none;
@@ -22,7 +23,11 @@ h2 {
 	text-align: center;
 	font-size: 3vw;
 }
-
+@keyframes blah {
+		0% {  opacity: 70%;}
+  		50% {  opacity: 100%; }
+  		100% {  opacity: 70%; }
+	}
 button {
 	margin-top: 5px;
 	margin-left: 5px;
@@ -56,13 +61,11 @@ a:visited {
   		50% {  opacity: 100%; }
   		100% {  opacity: 70%; }
 	}
-
+	h2 {
+		display: none;
 	}
 	button {
 		font-size: 4vw;
-	}
-	h2 {
-		display: none;
 	}
 	h1{
 		display: flex;
