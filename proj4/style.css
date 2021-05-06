@@ -45,26 +45,7 @@ a:visited {
 	img {
 		max-width: 70%;
 		max-height: 90%;
-	}
-
-	#img1 {
 		animation: blah 5s ease-in-out infinite alternate;
-	
-	}
-
-	#img2 {
-		animation: blahtwo 5s ease-in-out infinite alternate;
-		
-	}
-
-	#img3 {
-		animation: blahtwo 5s ease-in-out infinite alternate;
-	
-	}
-
-	#img4 {
-		animation: blah 5s ease-in-out infinite alternate;
-		
 	}
 
 	@keyframes blah {
@@ -79,6 +60,9 @@ a:visited {
 	}
 	h2 {
 		font-size: 7vw;
+	}
+	.screenshot {
+		display: none;
 	}
 
 }

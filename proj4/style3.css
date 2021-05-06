@@ -59,5 +59,8 @@ a:visited {
 	h2 {
 		font-size: 7vw;
 	}
+	.screenshot {
+		display: none;
+	}
 
 }
