@@ -1,0 +1,57 @@
+html {
+    color: #000;
+    font-size: 1rem;
+    line-height: 1.4;
+    background-image: url(garfield-bg.jpg);
+    -webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+    font-family: 'Gluten', cursive;
+}
+
+h1 {
+    font-size: 4rem;
+    text-align: center;
+    text-shadow: 2px 2px 8px black;
+}
+
+#before {
+    text-align: center;
+    display:grid;
+    place-items: center;
+}
+
+#title {
+    border: dashed 2px black;
+}
+
+input, label {
+    display: block;
+}
+
+input {
+    font-size: 1.5rem;
+}
+
+label {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 8px black;
+}
+
+#showanswer {
+    display: relative;
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    font-family: 'Gluten', cursive;
+    text-align: center;
+    font-size: 2rem;
+    padding: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#showanswer:hover {
+    background-color:white ;
+    color: black;
+}
