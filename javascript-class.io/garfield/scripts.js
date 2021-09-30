@@ -3,17 +3,67 @@
 //Create an ARRAY of possible responses. Separate each 'string' with a comma.
 //arrays only work with strings or numbers
 //counting in any computer language, 0 counts as a number, 0-19 is 20 items
-var answerShown = 0;
 
-randomResponse.setAttribute("hidden", true);
-document.querySelector("showanswer").addEventListener('click', showAnswer);
 
-function showAnswer() {
-    if (answerShown == 0){
-    answerShown = 1;
-    document.querySelector("after").removeAttribute("hidden");
+//document.querySelector("after").setAttribute("hidden", true);
+var butt = document.getElementById("showanswer");
+butt.addEventListener("click", showLoading);
+
+var booty = document.getElementById("showfinalanswer");
+booty.addEventListener("click", showAnswer);
+
+var x = document.getElementById("before");
+var y = document.getElementById("between");
+var z = document.getElementById("after");
+
+x.style.display ="grid";
+
+
+function showLoading() {
+    if (x.style.display == "grid") {
+        x.style.display = "none";
+        y.style.display = "grid";
+    } else if (x.style.display == "none") {
+        x.style.display = "none"
+        y.style.display = "none";
     }
 }
+
+function showAnswer() {
+    if (y.style.display == "grid") {
+        y.style.display = "none";
+        z.style.display = "grid";
+    }
+}
+
+
+
+
+
+//function finalAnswer() {
+    //var x = document.getElementById("after");
+    //if (x.style.display === "none") {
+       //x.style.display = "grid";
+    //}
+//}
+//var catplay = document.getElementById("loading").src="speech-bubble.png";
+//catplay = setTimeout(finalAnswer, 3000);
+
+//let key = 1;
+//switch (key) {
+    //case 1:
+        //showAnswer();
+
+   //case 2:
+        //loadingScreen();
+    //case 3:
+        //finalAnswer();
+//}
+
+
+
+
+//document.querySelector("showanswer").addEventListener('click', showAnswer);
 
 
 

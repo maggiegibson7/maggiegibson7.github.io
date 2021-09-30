@@ -13,19 +13,26 @@
     <!-- Including "defer" ensures that the script will not run until the HTML page is fully loaded and rendered. -->
 </head>
 <body>
-    <h1 id="title">garfield knows all</h1>
+    
     <div id="before">
+        <h1 id="title">garfield knows all</h1>
         <span id="content1"><label for="question">ask garfield a question!</label></span>
         <input type="text" question="question" id="question" size="20">
         <button type="button" id="showanswer">
-            submit the question to the overlord
+            submit your question to the overlord
         </button>
     </div>
-    <!---<div id="after">
+    <div id="between">
+        <button type="button" id="showfinalanswer">show me the answer</button>
+        <img src="garfield.gif" id="loading">
+        
+    </div>
+    <div id="after">
         <h2 id="display">Replace with response</h2>
-        <button type="button">
+        <button type="button" id="final">
             <a href="index.html">ask garfield another question</a>
         </button>
     </div>
+    
 </body>
 </html>

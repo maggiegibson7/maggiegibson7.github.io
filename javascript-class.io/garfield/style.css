@@ -55,3 +55,71 @@ label {
     background-color:white ;
     color: black;
 }
+
+#display {
+    text-align: center;
+    margin: 20px;
+    background-color: white;
+    color: black;
+    font-size: 2rem;
+    padding: 10px;
+    border: dashed 2px black;
+}
+
+#final {
+    display: relative;
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    font-family: 'Gluten', cursive;
+    text-align: center;
+    font-size: 2rem;
+    padding: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+ #final:hover {
+    background-color:white ;
+    color: black;
+ }
+
+ #final a:link {
+     text-decoration: none;
+ }
+
+ #final a:visited {
+     text-decoration: none;
+     color: white;
+
+ }
+#after {
+    display: none;
+}
+
+#between {
+    display: none;
+}
+
+#showfinalanswer {
+    display: relative;
+    vertical-align: middle;
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    font-family: 'Gluten', cursive;
+    text-align: center;
+    font-size: 2rem;
+    padding: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    z-index: 3;
+}
+
+#showfinalanswer:hover {
+    background-color:white ;
+    color: black;
+}
+
+#loading {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
