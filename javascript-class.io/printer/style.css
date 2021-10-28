@@ -1,0 +1,191 @@
+html {
+    background-color: white;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 400px 400px;
+    grid-template-rows: 400px 400px;
+    padding: 0;
+    align-content: center;
+    margin-left: 15%;
+    
+    
+}
+
+#slideshow-container {
+    grid-column: 1;
+    grid-row: 1;
+    animation-name: zoom;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1,1);
+        opacity: 100%;
+    }
+    25% {
+        transform: scale(1.2,1.2);
+        opacity: 70%;
+    }
+    50% {
+        transform: scale(1,1);
+        opacity: 100%;
+    }
+    75% {
+        transform: scale(0.8, 0.8);
+        opacity: 70%;
+    }
+    100% {
+        transform: scale(1,1);
+        opacity: 100%;
+    }
+}
+
+#slideshow-container2 {
+    grid-column: 2;
+    grid-row: 1;
+    animation-name: zooms;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-delay: 0.1s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes zooms {
+    0% {
+        transform: scale(1,1);
+        opacity: 100%;
+    }
+    25% {
+        transform: scale(0.8,0.8);
+        opacity: 70%;
+    }
+    50% {
+        transform: scale(1,1);
+        opacity: 100%;
+    }
+    75% {
+        transform: scale(1.2,1.2);
+        opacity: 70%;
+    }
+    100% {
+        transform: scale(1,1);
+        opacity: 100%;
+    }
+}
+
+#slideshow-container3 {
+    grid-column: 1;
+    grid-row: 2;
+    animation-name: zoomss;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-delay: 0.2s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes zoomss {
+    0% {
+        transform: scale(1,1);
+        opacity: 100%;
+    }
+    25% {
+        transform: scale(0.8,0.8);
+        opacity: 70%;
+    }
+    50% {
+        transform: scale(1,1);
+        opacity: 100%;
+    }
+    75% {
+        transform: scale(1.2, 1.2);
+        opacity: 70%;
+    }
+    100% {
+        transform: scale(1,1);
+        opacity: 100%;
+    }
+}
+
+#slideshow-container4 {
+    grid-column: 2;
+    grid-row: 2;
+    animation-name: zoomsss;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-delay: 0.3s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes zoomsss {
+    0% {
+        transform: scale(1,1);
+        opacity: 100%;
+    }
+    25% {
+        transform: scale(1.2,1.2);
+        opacity: 70%;
+    }
+    50% {
+        transform: scale(1,1);
+        opacity: 100%;
+    }
+    75% {
+        transform: scale(0.8, 0.8);
+        opacity: 70%;
+    }
+    100% {
+        transform: scale(1,1);
+        opacity: 100%;
+    }
+}
+
+
+[data-component="slideshow"] .image {
+	display: none;
+  text-align: center;
+}
+
+[data-component="slideshow"] .image.active {
+	display: block;
+   
+    
+}
+
+[data-component="slideshoww"] .imagee  {
+    display: none;
+    text-align: center;
+}
+
+[data-component="slideshoww"] .imagee.active {
+	display: block;
+    
+}
+
+[data-component="slideshowww"] .imageee  {
+    display: none;
+    text-align: center;
+}
+
+[data-component="slideshowww"] .imageee.active {
+	display: block;
+    
+}
+
+[data-component="slideshowwww"] .imageeee  {
+    display: none;
+    text-align: center;
+}
+
+[data-component="slideshowwww"] .imageeee.active {
+	display: block;
+    
+}
