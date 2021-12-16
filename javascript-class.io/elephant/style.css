@@ -1,0 +1,112 @@
+html {
+	background-color: #77dd77;
+	font-family: Montserrat, sans-serif;
+	color: white;
+	text-align: center;
+	align-content: center;
+}
+
+h2 {
+	text-align: center;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 300px 400px;
+}
+
+.sound-waves {
+	grid-column: 2;
+	grid-row: 1;
+	vertical-align: middle;
+	align-content: center;
+	z-index: 1;
+	animation: waves 3s ease-in-out infinite alternate;
+}
+
+.circle1 {
+	animation: waves 3s ease-in-out infinite alternate;
+	animation-delay: 4.0s;
+	vertical-align: middle;
+	align-content: center;
+}
+
+.circle2 {
+	animation: waves 3s ease-in-out infinite alternate;
+	animation-delay: 3.5s;
+	vertical-align: middle;
+	align-content: center;
+}
+
+.circle3 {
+	animation: waves 3s ease-in-out infinite alternate;
+	animation-delay: 3.0s;
+	vertical-align: middle;
+	align-content: center;
+}
+
+.circle4 {
+	animation: waves 3s ease-in-out infinite alternate;
+	animation-delay: 2.5s;
+	vertical-align: middle;
+	align-content: center;
+}
+
+.circle5 {
+	animation: waves 3s ease-in-out infinite alternate;
+	animation-delay: 2.0s;
+	vertical-align: middle;
+	align-content: center;
+}
+
+.circle6 {
+	animation: waves 3s ease-in-out infinite alternate;
+	animation-delay: 1.5s;
+	vertical-align: middle;
+	align-content: center;
+}
+
+.circle7 {
+	animation: waves 3s ease-in-out infinite alternate;
+	animation-delay: 1.0s;
+	vertical-align: middle;
+	align-content: center;
+}
+
+.circle8 {
+	animation: waves 3s ease-in-out infinite alternate;
+	animation-delay: 0.5s;
+	vertical-align: middle;
+	align-content: center;
+}
+
+.circle9 {
+	animation: waves 3s ease-in-out infinite alternate;
+	vertical-align: middle;
+	align-content: center;
+
+}
+
+@keyframes waves {
+	0% {transform: scale(0);}
+	50% {transform: scale(1.0);}
+	100% {transform: scale(2.0);}
+}
+
+
+.leaf {
+	grid-column: 2;
+	grid-row: 1;
+	vertical-align: middle;
+	align-content: center;
+	animation: grow 10s ease-in-out infinite alternate;
+	z-index: 2;
+}
+
+@keyframes grow {
+	0% {transform: scale(0.1);}
+	50% {transform: scale(0.5);}
+	100% {transform: scale(1.0);}
+}
+
