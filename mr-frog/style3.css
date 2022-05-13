@@ -1,0 +1,153 @@
+html {
+  font-family: 'Rubik', sans-serif;
+}
+.grid-container {
+  display: grid;
+  column-gap: 10px;
+  row-gap: 10px;
+  grid-template-columns: 200px 200px 200px 200px 200px 200px 100px 100px;
+  grid-template-rows: 175px 50px;
+}
+header {
+  position: fixed;
+  margin-left: 140px;
+  margin-top: 45px;
+  border-radius: 25px;
+  border: 2px solid white;
+  background-color: black;
+  padding: 15px;
+  color: white;
+  height: 80px;
+  box-shadow: 3px 3px 3px black;
+  z-index: 50;
+}
+
+.instructions {
+  grid-row-start: 2;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
+#icon img {
+  position: fixed;
+  margin-left: 0px;
+  margin-top: 0px;
+  z-index: 50;
+}
+
+#home-button {
+  grid-column-start: 5;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  padding: 0px;
+  margin-left: 200px;
+  margin-top: 50px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 25px;
+  height: 120px;
+  width: 120px;
+  align-content: center;
+}
+
+figcaption {
+  font-style: italic;
+  font-size: .8em;
+  text-align: center;
+}
+
+#title {
+  line-height: 0.1;
+}
+
+#sub {
+  line-height: 0.5;
+  font-style: italic;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-family: 'Rubik', sans-serif;
+}
+
+a:hover {
+  color: black;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 2em;
+  line-height: normal;
+  font-style: normal;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 1.2em;
+  line-height: normal;
+  font-weight: 300;
+}
+
+p {
+  font-size: 1em;
+  line-height: normal;
+  font-weight: 200;
+}
+
+.grid {
+  display: grid;
+    align-items: center;
+    grid-template-columns: 300px 300px 300px 300px;
+  	grid-template-rows: 500px 500px 500px 500px;
+  	grid-gap: 15px;
+  	z-index: 2;
+  	align-content: center;
+  	align-items: center;
+  	vertical-align: middle;
+}
+
+.song-grid {
+	border: solid 1px black;
+	border-radius: 8px;
+	align-content: center;
+	vertical-align: middle;
+	align-content: center;
+	padding: 5px;
+	z-index: 2;
+  height: 500px;
+  width: 300px;
+  background-color: black;
+}
+
+.link {
+  border: 2px dotted black;
+  border-radius: 10px;
+  padding: 3px;
+  text-align: center;
+}
+.link:hover {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.location {
+  text-align: center;
+}
+
+.descr {
+  text-align: left;
+}
+
+.name {
+  text-align: center;
+}
