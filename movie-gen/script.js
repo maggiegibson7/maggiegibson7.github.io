@@ -115,7 +115,7 @@ function docShuffle() {
     document.querySelector("#last-doc").remove();
     let myElement = document.createElement("div");
     docBox.append(myElement);
-    let filmRandom = topNarrative[Math.floor(Math.random()*topNarrative.length)];
+    let filmRandom = topDocumentary[Math.floor(Math.random()*topDocumentary.length)];
     
     if (filmRandom.Film_title == undefined)return;
     if (filmRandom.Release_year == undefined)return;
@@ -160,8 +160,11 @@ function docShuffle() {
 //var showMovie = document.querySelector("#test");
 //showMovie.addEventListener("click", shuffleMe);
 document.querySelector("#test").addEventListener("click", oscarShuffle);
+document.querySelector("#test").addEventListener("touchStart", oscarShuffle);
 document.querySelector("#showNarrative").addEventListener("click", narrativeShuffle);
+document.querySelector("#showNarrative").addEventListener("touchStart", narrativeShuffle);
 document.querySelector("#showDocumentary").addEventListener("click", docShuffle);
+document.querySelector("#showDocumentary").addEventListener("touchStart", docShuffle);
 
 let allFilms = [];
 //allFilms.push(oscarNom, topNarrative, topDocumentary); created arrays inside of array
