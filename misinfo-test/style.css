@@ -1,0 +1,11 @@
+html {
+    background-color: pink;
+}
+
+#wrapper {
+    width: 90vw;
+    height: 45vw;
+    background-color: white;
+    border-radius: 50px;
+    
+}
