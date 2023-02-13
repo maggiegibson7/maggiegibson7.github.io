@@ -77,7 +77,7 @@ header {
 
 .images {
   object-fit: cover;
-  max-height: 500px;
+  max-height:500px;
   grid-column: 2;
   display:flex;
   overflow-x: scroll;
