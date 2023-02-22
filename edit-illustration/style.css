@@ -1,0 +1,328 @@
+html {
+    margin: 10px;
+    background-color: #724F85;
+}
+
+.hands img {
+    height: auto;
+    position: fixed;
+    z-index: 40;
+}
+
+.wrapper {
+    display: block;
+    position: fixed;
+    margin-left: 20vw;
+    overflow:clip;
+    overflow-clip-margin: 5px;
+}
+
+
+#hand-1 {
+    z-index: 5;
+    width: 450px;
+    margin-top: 280px;
+    margin-left: 30px;
+    animation: wiggle 3s ease-in-out infinite;
+    position: fixed;
+}
+
+#hand-2 {
+    width: 450px;
+    z-index: 6;
+    margin-top: 230px;
+    margin-left: 70px;
+    animation: flicker 3s ease-in-out infinite;
+    position: fixed;
+}
+.fingies-hand1 {
+    display: inline-block;
+    height: 800px;
+    width: 500px;
+    overflow: hidden;
+    /* position: relative; */
+}
+
+.fingies-hand2 {
+    display: inline-block;
+    height: 800px;
+    width: 500px;
+    overflow: hidden;
+    
+    /* position: relative; */
+}
+#fingie-1 {
+    width: 170px;
+    height: auto;
+    margin-left: 370px;
+    margin-top: 80px;
+    z-index: -1;
+    display: flex;
+    position: fixed;
+    animation-delay: 0.5s;
+    animation: flicker 3s ease-in-out infinite;
+    filter: drop-shadow(5px 5px 5px white);
+}
+#fingie-2 {
+    width: 190px;
+    height: auto;
+    z-index: -1;
+    display: flex;
+    margin-left: 300px;
+    margin-top: 100px;
+    position: fixed;
+    animation-delay: 1s;
+    animation: blur 4s ease-in-out infinite;
+    filter: drop-shadow(5px 5px 5px white);
+}
+
+#fingie-3 {
+    width: 180px;
+    height: auto;
+    z-index: -1;
+    display: flex;
+    margin-left: 240px;
+    margin-top: 25px;
+    position: absolute;
+    animation: wiggle 2s ease-in-out infinite;
+    filter: drop-shadow(5px 5px 5px white);
+}
+#fingie-4 {
+    width: 170px;
+    height: auto;
+    z-index: -1;
+    display: flex;
+    margin-left: 100px;
+    margin-top: 50px;
+    position: absolute;
+    filter: drop-shadow(5px 5px 5px white);
+    animation: flicker 4s ease-in-out infinite;
+
+}
+#fingie-5 {
+    width: 170px;
+    height: auto;
+    z-index: -1;
+    display: flex;
+    margin-left: 80px;
+    margin-top: 120px;
+    position: fixed;
+    animation: blur 3s ease-in-out infinite;
+    animation-delay: 1s;
+    filter: drop-shadow(5px 5px 5px white);
+}
+#fingie-6 {
+    width: 300px;
+    height: auto;
+    z-index: -1;
+    display: flex;
+    margin-left: 200px;
+    margin-top: 20px;
+    position: fixed;
+    filter: drop-shadow(5px 5px 5px white);
+    animation: wiggle 2s ease-in-out infinite;
+}
+#fingie-7 {
+    width: 300px;
+    height: auto;
+    z-index: -1;
+    display: flex;
+    margin-left: 100px;
+    margin-top: 60px;
+    position: fixed;
+    animation-delay: 0.5s;
+    animation: flicker 2s ease-in-out infinite;
+    filter: drop-shadow(5px 5px 5px white);
+}
+#fingie-8 {
+    width: 300px;
+    height: auto;
+    z-index: -1;
+    display: flex;
+    margin-left: 40px;
+    margin-top: 60px;
+    position: fixed;
+    animation-delay: 1s;
+    animation: blur 3s ease-in-out infinite;
+    filter: drop-shadow(5px 5px 5px white);
+}
+#fingie-9 {
+    width: 300px;
+    height: auto;
+    z-index: -1;
+    display: flex;
+    margin-left: 0px;
+    margin-top: 140px;
+    position: fixed;
+    animation-delay: 0.5s;
+    animation: wiggle 2s ease-in-out infinite;
+    filter: drop-shadow(5px 5px 5px white);
+}
+
+@keyframes wiggle {
+    0% {transform: translate(0px,0px);opacity: 100%; filter: blur(0px);}
+    25% {transform: translate(-3px,3px);opacity: 80%; filter: blur(2px);}
+    50% {transform: translate(-6px,6px);opacity: 70%; filter: blur(3px);}
+    75% {transform: translate(-3px,3px);opacity: 80%; filter: blur(2px);}
+    100% {transform: translate(0px,0px);opacity: 100%; filter: blur(0px);}
+}
+
+@keyframes flicker {
+    0%{opacity: 100%;transform: translate(0px,0px);filter: blur(0px);}
+    25%{opacity: 80%;transform: translate(4px,4px);filter: blur(3px);}
+    50%{opacity: 60%;transform: translate(8px,8px);filter: blur(5px);}
+    75%{opacity: 80%;transform: translate(4px,4px);filter: blur(3px);}
+    100%{opacity: 100%;transform: translate(0px,0px);filter: blur(0px);}
+}
+
+@keyframes blur {
+    0%{filter: blur(0px); transform: translate(0px,0px);opacity: 100%;}
+    25%{filter: blur(4px); transform: translate(1px,1px);opacity: 90%;}
+    50%{filter: blur(6px);transform: translate(2px,2px);opacity: 80%;}
+    75%{filter: blur(4px); transform: translate(1px,1px);opacity: 90%;}
+    100%{filter: blur(0px); transform: translate(0px,0px);opacity: 100%;}
+}
+
+#fingie-10{
+    width: 11%;
+    height: auto;
+    z-index: -1;
+    display: flex;
+    margin-left: 50px;
+    margin-top: 50px;
+    position: fixed;
+    filter: drop-shadow(5px 5px 5px white);
+    animation: flicker 2s ease-in-out infinite;
+}
+
+#fingie-11 {
+    width: 10%;
+    height: auto;
+    z-index: -1;
+    display: flex;
+    margin-left: 10px;
+    margin-top: 50px;
+    position: fixed;
+    filter: drop-shadow(5px 5px 5px white);
+    animation: blur 3s ease-in-out infinite;
+}
+
+#fingie-12 {
+    width: 10%;
+    height: auto;
+    z-index: -1;
+    display: flex;
+    margin-left: 40px;
+    margin-top: 50px;
+    position: fixed;
+    filter: drop-shadow(5px 5px 5px white);
+    animation: flicker 2s ease-in-out infinite;
+}
+
+#fingie-13 {
+    width: 11%;
+    height: auto;
+    z-index: -1;
+    display: flex;
+    margin-left: 100px;
+    margin-top: 80px;
+    position: fixed;
+    filter: drop-shadow(5px 5px 5px white);
+    animation: blur 4s ease-in-out infinite;
+}
+
+#fingie-14 {
+    width: 12%;
+    height: auto;
+    z-index: -1;
+    display: flex;
+    margin-left: 100px;
+    margin-top: 50px;
+    position: fixed;
+    filter: drop-shadow(5px 5px 5px white);
+    animation: flicker 3s ease-in-out infinite;
+}
+
+#fingie-15 {
+    width: 300px;
+    height: auto;
+    z-index: -1;
+    display: flex;
+    margin-left: 100px;
+    margin-top: 50px;
+    position: fixed;
+    animation: flicker 3s ease-in-out infinite;
+    filter: drop-shadow(5px 5px 5px white);
+}
+
+#fingie-16 {
+    width: 300px;
+    height: auto;
+    z-index: -1;
+    display: flex;
+    margin-left: 20px;
+    margin-top: 50px;
+    position: fixed;
+    animation: flicker 3s ease-in-out infinite;
+    filter: drop-shadow(5px 5px 5px white);
+}
+
+#fingie-17 {
+    width: 300px;
+    height: auto;
+    z-index: -1;
+    display: flex;
+    margin-left:0px;
+    margin-top: 50px;
+    position: fixed;
+    animation: flicker 3s ease-in-out infinite;
+    filter: drop-shadow(5px 5px 5px white);
+}
+
+#fingie-18 {
+    width: 300px;
+    height: auto;
+    z-index: -1;
+    display: flex;
+    margin-left:200px;
+    margin-top: 50px;
+    position: fixed;
+    animation: flicker 3s ease-in-out infinite;
+    filter: drop-shadow(5px 5px 5px white);
+}
+
+#circle-1 {
+    z-index: -5;
+    border-radius: 50%;
+    background-color: white;
+    width: 400px;
+    position: fixed;
+    margin-top: 15%;
+    margin-left:5%;
+    filter: drop-shadow(5px 5px 5px white);
+    height: 400px;
+    filter: blur(50px);
+    opacity: 70%;
+}
+
+#circle-2 {
+    z-index: -5;
+    border-radius: 50%;
+    background-color: white;
+    width: 400px;
+    position: fixed;
+    margin-top: 15%;
+    margin-left:5%;
+    filter: drop-shadow(5px 5px 5px white);
+    height: 400px;
+    filter: blur(50px);
+    opacity: 70%;
+}
+
+#cover-up {
+    z-index: 15;
+    background-color:#724F85;
+    width: 100vw;
+    height: 300px;
+    box-shadow: 0 0 5px 10px #724F85;
+}

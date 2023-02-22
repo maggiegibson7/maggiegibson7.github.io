@@ -1,48 +1,41 @@
-//const hoverOne = document.getElementById(erika);
-//const hoverTwo = document.getElementById(trish);
-//const hoverThree = document.getElementById(chaya);
-//const test = document.querySelectorAll(".sparkle-text");
-const grab = document.querySelectorAll("p.xy");
-const hover = document.querySelectorAll(".sparkle-text");
-const sparkle = grab[0].innerText;
-const sparkleTwo = grab[1].innerText;
-const sparkleThree = grab[2].innerText;
-console.log("is this on");
-console.log(sparkle);
-//console.log(hoverOne);
-console.log(grab);
-console.log(hover);
-console.log(grab[0].innerText);
+var erikaHeart = document.querySelectorAll(".heart-frame");
 
-var characters = sparkle.split('');
-var charactersTwo = sparkleTwo.split('');
-var charactersThree = sparkleThree.split('');
-console.log(characters);
-
-
-function rotateOne() {
-    console.log("hey");
-    grab[0].style.transform = "rotate(7deg)";
-    grab[0].style.transform = "scaleX(10%)";
+function showDevil(){
+    var erikaDevil = document.querySelector("#erika-devil");
+    var chayaDevil = document.querySelector("#chaya-devil");
+    var trishaDevil = document.querySelector("#trisha-devil");
+    var testMe = window.getComputedStyle(erikaDevil, null);
+    //console.log(testMe);
+    if (testMe.getPropertyValue("display")=='none') {
+        erikaDevil.style.display = 'block';
+        chayaDevil.style.display = 'block';
+        trishaDevil.style.display = 'block';
+    } else if (testMe.getPropertyValue("display")=='block') {
+        erikaDevil.style.display = 'none';
+        chayaDevil.style.display = 'none';
+        trishaDevil.style.display = 'none';
+    }
+    //console.log('hi!');
 };
 
-function undoOne() {
-    grab[0].style.transform = "rotate(-7deg)";
-    grab[0].style.transform = "scaleX(-10)";
-}
+setInterval(showDevil, 3000);
 
-function rotateTwo() {
-    console.log("hey");
-    grab[1].style.transform = "rotate(30deg)";
+const moveText = document.querySelector('.animated-text');
+
+document.addEventListener("mousemove", function(e){
+  
+    let distance = dist(e.clientX, e.clientY, window.innerWidth/2, window.innerHeight/2);
+    let hypotenuse = dist(0, 0, window.innerWidth/2, window.innerHeight/2);
+    let newColor = map(distance, 0, hypotenuse, 170, 360);
+    moveText.style.color = "hsl(" + newColor + ", 57%, 85%)";
+});
+
+function map(value, low1, high1, low2, high2) {
+    return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
 };
 
-function rotateThree() {
-    console.log("hey");
-    grab[2].style.transform = "rotate(30deg)";
+function dist(x1, y1, x2, y2){
+  let a = x1 - x2;
+  let b = y1 - y2;
+  return Math.sqrt( a*a + b*b );
 };
-
-hover[0].addEventListener("onmouseover", rotateOne());
-hover[1].addEventListener("onmouseover", rotateTwo());
-hover[2].addEventListener("onmouseover", rotateThree());
-
-hover[0].addEventListener("onmouseleave",undoOne());

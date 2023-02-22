@@ -1,101 +1,183 @@
 html {
-    padding: 10px;
-    background-color:#BD91B9;
+    background-color:#70728F;
+    margin: 0;
 }
 
-/*#title img {
-    max-height: 250px;
+#title {
+    position: relative;
+    margin-top: 60px;
+    z-index: 40;
+    justify-self: center;
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
-} */
+    max-height: 8vh;
+    margin-left: 50vw;
+    transform: translate(-50%, -50%);
+}
+
+.intro {
+    display: flex;
+    position: relative;
+    padding-top: 10px;
+    padding-right: 10px;
+    margin-left: 20vw;
+    margin-right: 15vw;
+}
+
+#elaborate {
+    text-align: left;
+    display: flexbox;
+    font-family: 'Times New Roman', serif;;
+    font-weight: 500;
+    font-size: 3vh;
+    margin-top: 0;
+    padding-left: 10px;
+    color:#FFF1FF;
+    text-shadow: #ECDDDD 1px 0 10px;
+    margin-left: 20vw;
+    margin-right: 20vw;
+}
+
+.animated-text {
+    font-family: 'Times New Roman', serif;;
+    font-weight: 500;
+    font-size: 5.5vh;
+    text-shadow: #ECDDDD 1px 0 10px;
+    text-align: left;
+}
+
+h1 {
+    display: flex;
+    font-family: 'Times New Roman', serif;
+    font-weight: 400;
+    font-size: 7em;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+    position: absolute;
+    color: #ECDDDD;
+    margin-top: 0;
+}
+
 
 #wrapper {
+    margin-left: 4vw;
+    margin-right: 5vw;
     display: grid;
-    grid-template-columns: 570px 570px 570px;
-    grid-template-rows: 550px 150px;
-    margin-top: 150px;
+    grid-template-columns: 30vw 30vw 30vw;
+    grid-template-rows: 63vh 11vh auto auto;
+    margin-top: 11vh;
+    position: relative;
 }
 
 .sparkle-text {
     grid-row: 2;
-    font-family: 'Cormorant Garamond';
+    font-family: 'Times New Roman';
     text-align: center;
-    font-size: 1.6em;
+    font-size: 3em;
     color: #ECDDDD;
-    
-    /*border: 1px solid white; */
-    padding: 20px;
-    margin: 20px;
-    border-radius: 50px;
 }
 
 .sparkle-text a {
     color: #ECDDDD;
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
-    -moz-animation: glow 1s ease-in-out infinite alternate;
-    animation: glow 1s ease-in-out infinite alternate;
-    rotate: 0;
-}
-
-.xy:hover {
-    animation-name: wiggle;
-    animation: ease-in-out 2s;
-    cursor: default;
-}
-
-@keyframes wiggle {
-    0% {
-        transform: rotate(0deg);
-    }
-    50% {
-        transform: rotate(15deg);
-    }
-
-    100% {
-        transform: rotate(30deg);
-    }
+    animation: smallglow 1s ease-in-out infinite alternate;
 }
 
 @keyframes glow {
     from {
-      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FFBFF1, 0 0 40px #F2B9FF, 0 0 50px #DBCFDD, 0 0 60px #F2B9FF, 0 0 70px #FFBFF1;
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #FFBFF1, 0 0 20px #F2B9FF, 0 0 25px #DBCFDD, 0 0 30px #F2B9FF, 0 0 35px #FFBFF1;
     }
     to {
-      text-shadow: 0 0 20px #fff, 0 0 30px #FFBFF1, 0 0 40px #F2B9FF, 0 0 50px #DBCFDD, 0 0 60px #F2B9FF, 0 0 70px #FFBFF1, 0 0 80px #FFB0E1;
+      text-shadow: 0 0 10px #fff, 0 0 15px #FFBFF1, 0 0 20px #F2B9FF, 0 0 25px #DBCFDD, 0 0 30px #F2B9FF, 0 0 40px #FFBFF1, 0 0 50px #FFB0E1;
+    }
+  }
+  @keyframes smallglow {
+    from {
+      text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 8px #FFBFF1, 0 0 10px #F2B9FF, 0 0 12px #DBCFDD, 0 0 10px #F2B9FF, 0 0 8px #FFBFF1;
+    }
+    to {
+      text-shadow: 0 0 4px #fff, 0 0 10px #FFBFF1, 0 0 16px #F2B9FF, 0 0 20px #DBCFDD, 0 0 24px #F2B9FF, 0 0 20px #FFBFF1, 0 0 16px #FFB0E1;
     }
   }
 
+.heart-frame {
+    position: flex;
+}
+
 #erika-heart {
     grid-column: 1;
-    object-fit: cover;
+    object-fit: scale-down;
     display: block;
     margin-left: auto;
     margin-right: auto;
     grid-row: 1;
     overflow: hidden;
-    max-height: 600px;
+    max-height: 70vh;
 }
+
+#erika-devil {
+    grid-column: 1;
+    object-fit: scale-down;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    grid-row: 1;
+    overflow: hidden;
+    max-height: 70vh;
+    animation: glitch 3s infinite ease-in-out;
+}
+
 
 #trisha-heart {
     grid-column: 2;
     grid-row: 1;
-    object-fit: cover;
+    object-fit: scale-down;
     display: block;
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
-    max-height: 600px;
+    max-height: 70vh;
+}
+
+#trisha-devil {
+    grid-column: 2;
+    grid-row: 1;
+    object-fit: scale-down;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    max-height: 70vh;
+    animation: glitch 3s infinite ease-in-out;
 }
 
 #chaya-heart {
     grid-column: 3;
     grid-row: 1;
-    object-fit: cover;
+    object-fit: scale-down;
     display: block;
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
-    max-height: 600px;
+    max-height: 70vh;
+}
+
+#chaya-devil {
+    grid-column: 3;
+    grid-row: 1;
+    object-fit: scale-down;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    max-height: 70vh;
+    animation: glitch 3s infinite ease-in-out;
+    position: flex;
+}
+
+@keyframes glitch {
+    0%{opacity: 25%; transform: translate(0,0); filter: blur(2px);}
+    25%{opacity: 80%; transform: translate(1,1); filter: blur(0.5px);}
+    50%{opacity: 100%; transform: translate(2,2); filter: blur(0px);}
+    75%{opacity: 80%; transform: translate(1,1); filter: blur(0.5px);}
+    100%{opacity: 25%; transform: translate(0,0); filter: blur(2px);}
 }
 
