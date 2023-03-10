@@ -1,0 +1,84 @@
+html {
+    margin: 0;
+    padding: 0;
+    background-color: #FFF1FF;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "EditorialLight";
+    src: url(/thesis/fonts/PPEditorialNew-Ultralight.otf);
+  }
+  
+  @font-face {
+    font-family: "EditorialLightItalic";
+    src: url(/thesis/fonts/PPEditorialNew-UltralightItalic.otf);
+  }
+  
+  @font-face {
+    font-family: "ArialNarrow";
+    src: url(/thesis/fonts/arial-narrow.ttf);
+  }
+
+#frame {
+    z-index: -1;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+#paragraph-one {
+    font-family: 'ArialNarrow';
+    font-size: 1.4em;
+    color: #8A42AF;
+}
+
+#paragraph-two {
+    font-family: 'ArialNarrow';
+    font-size: 1.4em;
+    color: #8A42AF;
+}
+
+#container {
+    position: fixed;
+    margin-top: 29vh;
+    margin-left: 15vw;
+    width: 70vw;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 10px;
+}
+
+#link-bank {
+    position: fixed;
+    margin-left: 15vw;
+    margin-top: 70vh;
+    font-family: 'ArialNarrow';
+    font-size: 1.4em;
+}
+#link-bank a {
+    color: #8A42AF;
+}
+#trish {
+    position: fixed;
+    margin-left: 44vw;
+}
+#home {
+    position: fixed;
+    margin-left: 5vw;
+}
+
+#title {
+    font-family: 'EditorialLightItalic';
+    font-size: 5em;
+    color:#8A42AF;
+    position: fixed;
+    margin-top: 19vh;
+    margin-left: 39vw;
+    text-shadow: 0 0 8px #8A42AF;
+}

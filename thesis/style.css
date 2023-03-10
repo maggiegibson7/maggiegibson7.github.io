@@ -1,17 +1,21 @@
 html {
-    background-color:#70728F;
+    background-color:#FFF1FF;
     margin: 0;
 }
 
-#title {
-    position: relative;
-    margin-top: 60px;
-    z-index: 40;
-    justify-self: center;
-    display: flex;
-    max-height: 8vh;
-    margin-left: 50vw;
-    transform: translate(-50%, -50%);
+@font-face {
+    font-family: "ArialNarrow";
+    src: url(fonts/arial-narrow.ttf);
+}
+
+@font-face {
+    font-family: "EditorialItalic";
+    src: url(fonts/PPEditorialNew-UltralightItalic.otf);
+}
+
+@font-face {
+    font-family: "EditorialRegular";
+    src: url(fonts/PPEditorialNew-Ultralight.otf);
 }
 
 .intro {
@@ -26,37 +30,37 @@ html {
 #elaborate {
     text-align: left;
     display: flexbox;
-    font-family: 'Times New Roman', serif;;
+    font-family: 'ArialNarrow', serif;
     font-weight: 500;
     font-size: 3vh;
     margin-top: 0;
     padding-left: 10px;
-    color:#FFF1FF;
+    color:#8A42AF;
     text-shadow: #ECDDDD 1px 0 10px;
     margin-left: 20vw;
     margin-right: 20vw;
 }
 
 .animated-text {
-    font-family: 'Times New Roman', serif;;
-    font-weight: 500;
+    font-family: 'ArialNarrow', serif;
     font-size: 5.5vh;
     text-shadow: #ECDDDD 1px 0 10px;
     text-align: left;
 }
 
 h1 {
-    display: flex;
-    font-family: 'Times New Roman', serif;
-    font-weight: 400;
-    font-size: 7em;
+    position: relative;
+    margin-top: 10vh;
+    z-index: 40;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: #8A42AF;
+    font-size: 10vh;
     text-align: center;
-    animation: glow 1s ease-in-out infinite alternate;
-    position: absolute;
-    color: #ECDDDD;
-    margin-top: 0;
+    line-height: 0.5vh;
+    font-family: 'EditorialRegular';
 }
-
 
 #wrapper {
     margin-left: 4vw;
@@ -64,20 +68,21 @@ h1 {
     display: grid;
     grid-template-columns: 30vw 30vw 30vw;
     grid-template-rows: 63vh 11vh auto auto;
-    margin-top: 11vh;
+    margin-top: 3vh;
     position: relative;
 }
 
 .sparkle-text {
     grid-row: 2;
-    font-family: 'Times New Roman';
+    font-family: 'EditorialItalic';
     text-align: center;
-    font-size: 3em;
-    color: #ECDDDD;
+    font-size: 2.5em;
+    color: #8A42AF;
+    font-weight: 200;
 }
 
 .sparkle-text a {
-    color: #ECDDDD;
+    color: #8A42AF;
     animation: smallglow 1s ease-in-out infinite alternate;
 }
 
@@ -110,7 +115,7 @@ h1 {
     margin-right: auto;
     grid-row: 1;
     overflow: hidden;
-    max-height: 70vh;
+    max-height: 65vh;
 }
 
 #erika-devil {
@@ -121,7 +126,7 @@ h1 {
     margin-right: auto;
     grid-row: 1;
     overflow: hidden;
-    max-height: 70vh;
+    max-height: 65vh;
     animation: glitch 3s infinite ease-in-out;
 }
 
@@ -134,7 +139,7 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
-    max-height: 70vh;
+    max-height: 65vh;
 }
 
 #trisha-devil {
@@ -145,7 +150,7 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
-    max-height: 70vh;
+    max-height: 65vh;
     animation: glitch 3s infinite ease-in-out;
 }
 
@@ -157,7 +162,7 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
-    max-height: 70vh;
+    max-height: 65vh;
 }
 
 #chaya-devil {
@@ -168,7 +173,7 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
-    max-height: 70vh;
+    max-height: 65vh;
     animation: glitch 3s infinite ease-in-out;
     position: flex;
 }
@@ -180,4 +185,93 @@ h1 {
     75%{opacity: 80%; transform: translate(1,1); filter: blur(0.5px);}
     100%{opacity: 25%; transform: translate(0,0); filter: blur(2px);}
 }
+#pin-cushion p {
+    color:#8A42AF;
+    font-family: 'ArialNarrow', serif;
+    font-weight: 400;
+    font-size: 2.5vh;
+}
 
+#pin-graphic {
+    width: 50vw;
+    display: block;
+    position: absolute;
+    margin-top: 8vh;
+    margin-left: 25vw;
+    z-index: -1;
+}
+
+#queer-info-active {
+    margin-left: 18vw;
+    margin-top: 13vh;
+    width: 21vw;
+    padding: 10px;
+    position: absolute;
+    background-color: #FFF1FF;
+    border: 1px solid #8A42AF;
+}
+
+#victim-info-active {
+    margin-left: 45vw;
+    width: 18.5vw;
+    margin-top: 7vh;
+    position: absolute;
+    background-color: #FFF1FF;
+    border: 1px solid #8A42AF;
+    padding: 10px;
+}
+
+#exploit-info-active {
+    width: 25vw;
+    position: absolute;
+
+    margin-left: 65vw;
+    margin-top: 21vh;
+    background-color: #FFF1FF;
+    border: 1px solid #8A42AF;
+    padding: 10px;
+}
+
+.tag {
+    position: absolute;
+    color:#FFF1FF;
+    font-family: "EditorialRegular";
+    font-size: 2em;
+    line-height: 1em;
+    background-color:#8A42AF;
+    height: auto;
+    text-align: center;
+    z-index: 2;
+}
+
+#exploit-tag {
+    width: 26vw;
+    border: 5px solid #8A42AF;
+    margin-left: 65vw;
+    margin-top: 13vh;
+}
+
+#victim-tag {
+    border: 5px solid #8A42AF;
+    margin-left: 45vw;
+    width: 19.5vw;
+}
+
+#queer-tag {
+    border: 5px solid #8A42AF;
+    margin-left: 18vw;
+    margin-top: 9vh;
+    width: 22vw;
+}
+
+#exploit-info-notactive {
+    display: none;
+}
+
+#victim-info-notactive {
+    display: none;
+}
+
+#queer-info-notactive {
+    display: none;
+}
