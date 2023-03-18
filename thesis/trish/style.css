@@ -762,3 +762,145 @@ p {
 #sticky-four-two {
     margin-left: 80%;
 }
+
+.tweets {
+    height: auto;
+    margin-top: 10px;
+    border: solid 1px #8A42AF;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 48vw;
+    position: relative;
+    padding-bottom: 25px;
+}
+
+.tweet-content {
+    color: #8A42AF;
+    line-height: 1.4em;
+}
+
+
+.image-box {
+    max-width: 47vw;
+    max-height: 30vh;
+    object-fit: cover;
+    margin-top: 0;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    box-shadow: 0 0 5px #8A42AF;
+    transform: translate(0, -10px);
+}
+
+.video-box {
+    max-width: 47vw;
+    max-height: 30vh;
+    object-fit: cover;
+    margin-top: 0;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    box-shadow: 0 0 5px #8A42AF;
+    transform: translate(0, -10px);
+}
+
+.date-time {
+    font-size: 1.4em;
+    color: #8A42AF;
+    margin-top: 5px;
+}
+
+.likes {
+    font-size: 1.4em;
+    color:#8A42AF;
+    line-height: 0.05em;
+    position: absolute;
+    bottom: 0px;
+    left: 10px;
+}
+
+.retweets {
+    font-size: 1.4em;
+    color: #8A42AF;
+    line-height: 0.05em;
+    bottom: 0px;
+    right: 8px;
+    position: absolute;
+}
+
+#display-name {
+    position:fixed;
+    margin-top: 27.5vh;
+    margin-left: 6.5vw;
+}
+
+#twitter-handle {
+    position: fixed;
+    font-size: 1.4em;
+    color: #8A42AF;
+    margin-top: 32vh;
+    margin-left: 7vw;
+}
+
+#banner-picture {
+    position: fixed;
+    z-index: -1;
+    width: 25vw;
+    height: 23vh;
+    object-fit: cover;
+    margin-left: 1vw;
+    margin-top: 1vh;
+    box-shadow: 0 0 5px #8A42AF;
+}
+
+#profile-picture {
+    position: fixed;
+    width: 5vw;
+    height: 8vh;
+    object-fit: cover;
+    margin-top: 25.5vh;
+    margin-left: 1vw;
+}
+
+#follower-count {
+    position: fixed;
+    margin-top: 38vh;
+    width: 26vw;
+    text-align: center;
+    font-size: 1.4em;
+    color: #8A42AF;
+    height: 3.5vh;
+    margin-left: 0.5vw;
+    border: solid 1px #8A42AF;
+    padding-top: 0.5vh;
+}
+
+#tweet-count {
+    position: fixed;
+    margin-top: 43vh;
+    width: 26vw;
+    text-align: center;
+    font-size: 1.4em;
+    color: #8A42AF;
+    height: 3.5vh;
+    margin-left: 0.5vw;
+    border: solid 1px #8A42AF;
+    padding-top: 0.5vh;
+}
+
+#link-bio {
+    position: fixed;
+    margin-top: 48vh;
+    width: 26vw;
+    text-align: center;
+    font-size: 1.4em;
+    font-family: 'ArialNarrow';
+    color: #8A42AF;
+    height: 3.5vh;
+    margin-left: 0.5vw;
+    border: solid 1px #8A42AF;
+    padding-top: 0.5vh;
+}
+
+#link-bio:hover {
+    background-color: #8A42AF;
+    color: #FFF1FF;
+}

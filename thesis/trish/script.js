@@ -27,11 +27,15 @@ const trollInfo = document.querySelector("#trolling");
 const timeLine = document.querySelector(".timeline");
 const progressInd = document.querySelector(".progress-container")
 const whiteInfo = document.querySelector("#white-men");
+var socialMediaPage = document.querySelector("#social-media");
+const trishTwitterProfile = document.querySelector("#trish-twitter-profile");
 
+socialMediaPage.style.display = "none";
 whiteInfo.style.display = "none";
 const stickyBankOne = document.querySelector("#sticky-bank-one");
 stickyBankOne.style.display = "none";
 const stickyBankTwo = document.querySelector("#sticky-bank-two");
+trishTwitterProfile.style.display = "none";
 
 function beginTab() {
     mainArea.append(beginInfo);
@@ -52,6 +56,8 @@ function beginTab() {
     starSide.style.display = "none";
     wholeDrama.style.display = "none";
     stickyBankTwo.style.display = "none";
+    socialMediaPage.style.display = "none";
+    trishTwitterProfile.style.display = "none";
 };
 
 function trollTab() {
@@ -74,6 +80,8 @@ function trollTab() {
     starSide.style.display = "none";
     wholeDrama.style.display = "none";
     stickyBankTwo.style.display = "none";
+    socialMediaPage.style.display = "none";
+    trishTwitterProfile.style.display = "none";
 };
 
 function whiteTab() {
@@ -98,11 +106,40 @@ function whiteTab() {
     stickyBankOne.style.display = "block";
     wholeDrama.style.display = "block";
     stickyBankTwo.style.display = "none";
+    socialMediaPage.style.display = "none";
+    trishTwitterProfile.style.display = "none";
 }
+
+function showSocialMedia(){
+    mainArea.append(socialMediaPage);
+    whiteInfo.style.display = "none";
+    document.querySelector("#summary").style.display = "none";
+    trollInfo.style.display = "none";
+    beginInfo.style.display = "none";
+    familyContent.style.display = "none";
+    stripperContent.style.display = "none";
+    youtubeContent.style.display = "none";
+    religionContent.style.display = "none";
+    filmContent.style.display = "none";
+    icon.style.display = "none";
+    progressInd.style.display = "none";
+    timeLine.style.display = "none";
+    home.style.display = "none";
+    controversyContent.style.display = "none";
+    mentalHealthContent.style.display = "none";
+    attentionContent.style.display = "none";
+    bodyImgContent.style.display = "none";
+    stickyBankOne.style.display = "none";
+    wholeDrama.style.display = "none";
+    stickyBankTwo.style.display = "none";
+    socialMediaPage.style.display = "block";
+    trishTwitterProfile.style.display = "block";
+};
 
 beginButton.addEventListener("click", beginTab);
 trollButton.addEventListener("click", trollTab);
 dawsonButton.addEventListener("click", whiteTab);
+currentButton.addEventListener("click", showSocialMedia);
 
 const moveText = document.querySelectorAll('.animated-text');
 
@@ -115,6 +152,7 @@ document.addEventListener("mousemove", function(e){
     moveText[1].style.color = "hsl(" + newColor + ", 57%, 50%)";
     moveText[2].style.color = "hsl(" + newColor + ", 57%, 50%)";
     moveText[3].style.color = "hsl(" + newColor + ", 57%, 50%)";
+    moveText[4].style.color = "hsl(" + newColor + ", 57%, 50%)";
 });
 
 function map(value, low1, high1, low2, high2) {
@@ -486,3 +524,407 @@ function openDrama() {
 console.log(dramaOpen);
 dramaButton.addEventListener("click", openDrama);
 wholeDrama.style.display = "none";
+
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '95b5d8ed01msha02b9d913ce6c05p170e68jsn7c8cf00a38c6',
+		'X-RapidAPI-Host': 'twitter135.p.rapidapi.com'
+	}
+};
+
+fetch('https://twitter135.p.rapidapi.com/UserTweets/?id=27252380&count=40', options)
+	.then(function (response) {
+        return response.json();
+    })
+	.then(function (data) {
+        console.log(data);
+        var twitterTrish = data;
+        console.log(twitterTrish);
+        var trishTweets = twitterTrish.data.user.result.timeline.timeline.instructions[1].entries;
+        
+        function printTweets() {
+            trishTweets.forEach((tweet) => {
+                console.log(tweet);
+            });
+        };
+        printTweets();
+        
+        function userData(){
+            retweetTest = trishTweets[0].content.itemContent.tweet_results.result;
+            var profileDisplay = document.createElement('div');
+            if (retweetTest.hasOwnProperty('tweet')){//if its a retweet
+                //load display name once
+                var displayName = document.createElement("h1");
+                var displayNameConsole = trishTweets[0].content.itemContent.tweet_results.result.core.tweet.user_results.result.legacy.name;
+                displayName.innerText = displayNameConsole;
+                profileDisplay.appendChild(displayName);
+                displayName.id = "display-name";
+
+                //load @ once
+                var twitterHandle = document.createElement("p");
+                var twitterHandleConsole = trishTweets[0].content.itemContent.tweet_results.result.tweet.core.user_results.result.legacy.screen_name;
+                twitterHandle.innerText = `@${twitterHandleConsole}`;
+                profileDisplay.appendChild(twitterHandle);
+                twitterHandle.id = "twitter-handle"
+
+                //load follower count once
+                var followerCount = document.createElement("p");
+                var followerCountConsole = trishTweets[0].content.itemContent.tweet_results.result.tweet.core.user_results.result.legacy.followers_count;
+                followerCount.innerText = `followed by ${followerCountConsole}`;
+                profileDisplay.appendChild(followerCount);
+                followerCount.id = "follower-count";
+
+                //load tweet count once
+                var tweetCount = document.createElement("p");
+                var tweetCountConsole = trishTweets[0].content.itemContent.tweet_results.result.tweet.core.user_results.result.legacy.statuses_count;
+                tweetCount.innerText = `@${twitterHandleConsole} has tweeted ${tweetCountConsole} times`;
+                profileDisplay.appendChild(tweetCount);
+                tweetCount.id = "tweet-count";
+
+                //load link in bio once
+                var urlBio = trishTweets[0].content.itemContent.tweet_results.result.tweet.core.user_results.result.legacy.entities.url.urls[0].expanded_url;
+                var a = document.createElement("a");
+                var p1 = (trishTweets[0].content.itemContent.tweet_results.result.tweet.core.user_results.result.legacy.description);
+                var linkText = document.createTextNode(p1);
+                a.appendChild(linkText);
+                a.href = urlBio;
+                a.title = linkText;
+                profileDisplay.appendChild(a);
+                a.id = "link-bio";
+                console.log(a);
+
+                //load banner img once
+                var bannerPicture = document.createElement("img");
+                bannerPicture.src = trishTweets[0].content.itemContent.tweet_results.result.tweet.core.user_results.result.legacy.profile_banner_url;
+                profileDisplay.appendChild(bannerPicture);
+                bannerPicture.id = "banner-picture";
+
+                //load profile pic once
+                var profilePic = doucment.createElement("img");
+                profilePic.src = trishTweets[0].content.itemContent.tweet_results.result.tweet.core.user_results.result.legacy.profile_image_url_https;
+                profileDisplay.appendChild(profilePic);
+                profilePic.id = "profile-picture";
+
+                trishTwitterProfile.appendChild(profileDisplay);
+            } else {//not a retweet
+                //load display name once
+                var displayName = document.createElement("h1");
+                var displayNameConsole = trishTweets[0].content.itemContent.tweet_results.result.core.user_results.result.legacy.name;
+                displayName.innerText = displayNameConsole;
+                profileDisplay.appendChild(displayName);
+                displayName.id = "display-name";
+                displayName.classList.add("animated-text");
+
+                //load @ once
+                var twitterHandle = document.createElement("p");
+                var twitterHandleConsole = trishTweets[0].content.itemContent.tweet_results.result.core.user_results.result.legacy.screen_name;
+                twitterHandle.innerText = `@${twitterHandleConsole}`;
+                profileDisplay.appendChild(twitterHandle);
+                twitterHandle.id = "twitter-handle"
+
+                //load banner img once
+                var bannerPicture = document.createElement("img");
+                bannerPicture.src = trishTweets[0].content.itemContent.tweet_results.result.core.user_results.result.legacy.profile_banner_url;
+                profileDisplay.appendChild(bannerPicture);
+                bannerPicture.id = "banner-picture";
+
+                //load profile pic once
+                var profilePic = document.createElement("img");
+                profilePic.src = trishTweets[0].content.itemContent.tweet_results.result.core.user_results.result.legacy.profile_image_url_https;
+                profileDisplay.appendChild(profilePic);
+                profilePic.id = "profile-picture";
+
+                //load follower count once
+                var followerCount = document.createElement("p");
+                var followerCountConsole = trishTweets[0].content.itemContent.tweet_results.result.core.user_results.result.legacy.followers_count;
+                followerCount.innerText = `followed by ${followerCountConsole} people`;
+                profileDisplay.appendChild(followerCount);
+                followerCount.id = "follower-count";
+
+                //load tweet count once
+                var tweetCount = document.createElement("p");
+                var tweetCountConsole = trishTweets[0].content.itemContent.tweet_results.result.core.user_results.result.legacy.statuses_count;
+                tweetCount.innerText = `@${twitterHandleConsole} has tweeted ${tweetCountConsole} times`;
+                profileDisplay.appendChild(tweetCount);
+                tweetCount.id = "tweet-count";
+
+                //load link in bio once
+                var urlBio = trishTweets[0].content.itemContent.tweet_results.result.core.user_results.result.legacy.entities.url.urls[0].expanded_url;
+                var a = document.createElement("a");
+                var p1 = (trishTweets[0].content.itemContent.tweet_results.result.core.user_results.result.legacy.description);
+                var linkText = document.createTextNode(p1);
+                a.appendChild(linkText);
+                a.href = urlBio;
+                a.title = linkText;
+                profileDisplay.appendChild(a);
+                a.id = "link-bio";
+                console.log(a);
+
+
+
+                trishTwitterProfile.appendChild(profileDisplay);
+            };
+        };
+        userData();
+        function appendTweets(){
+            trishTweets.forEach((tweeter)=> {
+                const myDiv = document.createElement("div");
+                socialMediaPage.append(myDiv);
+                myDiv.classList.add("tweets");
+                var tweetType = tweeter.content.entryType;
+                if (tweetType == 'TimelineTimelineItem'){
+                    function contentLoad() {
+                        var reTweetTest = tweeter.content.itemContent.tweet_results.result;
+                        if (reTweetTest.hasOwnProperty('tweet')){ //Retweeted from someone else
+                            //load date and time
+                            var dateAndTime = document.createElement("p");
+                            var dateAndTimeConsole = tweeter.content.itemContent.tweet_results.result.tweet.legacy.created_at;
+                            var removeZeros = dateAndTimeConsole.replace("+0000","");
+                            var weekDay = removeZeros.substr(0,3);
+                            if (weekDay == "Mon"){
+                                weekDayFinal = "Monday,";
+                            } else if (weekDay == "Tue"){
+                                weekDayFinal = "Tuesday,";
+                            } else if (weekDay == "Wed") {
+                                weekDayFinal = "Wednesday,";
+                            } else if (weekDay == "Thu") {
+                                weekDayFinal = "Thursday,";
+                            } else if (weekDay == "Fri") {
+                                weekDayFinal = "Friday,";
+                            } else if (weekDay == "Sat") {
+                                weekDayFinal = "Saturday";
+                            } else if (weekDay == "Sun") {
+                                weekDayFinal = "Sunday,";
+                            };
+
+                            var month = removeZeros.substr(3,4);
+                            if (month == " Jan") {
+                                monthFinal = "January";
+                            } else if (month == " Feb"){
+                                monthFinal = "February";
+                            } else if (month == " Mar"){
+                                monthFinal = "March";
+                            } else if (month == " Apr"){
+                                monthFinal = "April";
+                            } else if (month == " May"){
+                                monthFinal = "May";
+                            } else if (month == " Jun"){
+                                monthFinal = "June";
+                            } else if (month == " Jul"){
+                                monthFinal = "July";
+                            } else if (month == " Aug"){
+                                monthFinal = "August";
+                            } else if (month == " Sep"){
+                                monthFinal = "September";
+                            } else if (month == " Oct"){
+                                monthFinal = "October";
+                            } else if (month == " Nov"){
+                                monthFinal = "November";
+                            } else if (month == " Dec"){
+                                monthFinal = "December";
+                            };
+                            var day = removeZeros.substr(6,6);
+                            var dayFinal = day.substr(2,2);
+                            var time = removeZeros.substr(10,11);
+                            var year = dateAndTimeConsole.substr(26);
+                            dateAndTime.innerText = `Retweeted at ${time} on ${weekDayFinal} ${monthFinal} ${dayFinal}, ${year}`;
+                            myDiv.append(dateAndTime);
+                            dateAndTime.classList.add("date-time");
+                            
+                            const pp = document.createElement("h2");
+                            var tweetContent = tweeter.content.itemContent.tweet_results.result.tweet.legacy.full_text;
+                            var a = tweetContent.replace(/(?:https?|ftp):\/\/[\n\S]+/g, '');
+                            console.log(a);
+                            pp.innerText = a;
+                            myDiv.append(pp);
+                            pp.classList.add("tweet-content");
+
+                            var likesConsole = tweeter.content.itemContent.tweet_results.result.tweet.legacy.favorite_count;
+                            var likes = document.createElement("p");
+                            likes.innerText = `☆ﾐ(*x_x)liked by ${likesConsole}`;
+                            myDiv.appendChild(likes);
+                            likes.classList.add("likes");
+                        
+                            var retweetsConsole = tweeter.content.itemContent.tweet_results.result.tweet.legacy.retweet_count;
+                            var quoteTweetsConsole = tweeter.content.itemContent.tweet_results.result.tweet.legacy.quote_count;
+                            var retweetsTotal = retweetsConsole + quoteTweetsConsole;
+                            console.log(retweetsTotal);
+                            var retweets = document.createElement("p");
+                            retweets.innerText = `･:*:･ﾟ’☆retweeted and quote tweeted by ${retweetsTotal}`;
+                            myDiv.appendChild(retweets);
+                            retweets.classList.add("retweets");
+
+                  
+
+                            var imagePath = tweeter.content.itemContent.tweet_results.result.tweet.legacy.entities;
+                            if (imagePath.hasOwnProperty('media')){ //determine if there is media attached
+                                var images = tweeter.content.itemContent.tweet_results.result.tweet.legacy.extended_entities.media;
+                                images.forEach((image)=> { //determine what type of media it is
+                                    //console.log(image.type);
+                                    if (image.type == "photo") {
+                                        imageBox = document.createElement('img');
+                                        imageBox.src = image.media_url_https;
+                                        imageBox.classList.add("image-box");
+                                        myDiv.append(imageBox);
+                                        console.log(imageBox);
+                                    } else if (image.type == "video") {
+                                        videoBox = document.createElement('video');
+                                        videoBox.src = image.expanded_url;
+                                        myDiv.append(videoBox);
+                                        console.log(videoBox);
+                                    }
+
+                                });
+                            } else {
+                                return null;
+                            };
+                        
+                        } else { //normal tweet
+                            //loading tweeter and user data
+
+                            //load date and time
+                            var dateAndTime = document.createElement("p");
+                            var dateAndTimeConsole = tweeter.content.itemContent.tweet_results.result.legacy.created_at;
+                            var removeZeros = dateAndTimeConsole.replace("+0000","");
+                            var weekDay = removeZeros.substr(0,3);
+                            if (weekDay == "Mon"){
+                                weekDayFinal = "Monday,";
+                            } else if (weekDay == "Tue"){
+                                weekDayFinal = "Tuesday,";
+                            } else if (weekDay == "Wed") {
+                                weekDayFinal = "Wednesday,";
+                            } else if (weekDay == "Thu") {
+                                weekDayFinal = "Thursday,";
+                            } else if (weekDay == "Fri") {
+                                weekDayFinal = "Friday,";
+                            } else if (weekDay == "Sat") {
+                                weekDayFinal = "Saturday";
+                            } else if (weekDay == "Sun") {
+                                weekDayFinal = "Sunday,";
+                            };
+
+                            var month = removeZeros.substr(3,4);
+                            if (month == " Jan") {
+                                monthFinal = "January";
+                            } else if (month == " Feb"){
+                                monthFinal = "February";
+                            } else if (month == " Mar"){
+                                monthFinal = "March";
+                            } else if (month == " Apr"){
+                                monthFinal = "April";
+                            } else if (month == " May"){
+                                monthFinal = "May";
+                            } else if (month == " Jun"){
+                                monthFinal = "June";
+                            } else if (month == " Jul"){
+                                monthFinal = "July";
+                            } else if (month == " Aug"){
+                                monthFinal = "August";
+                            } else if (month == " Sep"){
+                                monthFinal = "September";
+                            } else if (month == " Oct"){
+                                monthFinal = "October";
+                            } else if (month == " Nov"){
+                                monthFinal = "November";
+                            } else if (month == " Dec"){
+                                monthFinal = "December";
+                            };
+                            var day = removeZeros.substr(6,6);
+                            var dayFinal = day.substr(2,2);
+                            var time = removeZeros.substr(10,11);
+                            var hours = time.substr(0,3);
+                            var minutes = time.substr(3,4);
+                            var seconds = time.substr(7,7);
+                            console.log(seconds);
+                            if (hours > 12){
+                                finalHours = (hours - 12)+ minutes + seconds+"PM";
+                            } else {
+                                finalHours = hours + minutes + seconds+"AM";
+                            };
+                            finalFinalHours = finalHours.replace("  ", " ");
+                            console.log(finalFinalHours);
+                            var year = dateAndTimeConsole.substr(26);
+                            dateAndTime.innerText = `Tweeted at ${finalFinalHours} on ${weekDayFinal} ${monthFinal} ${dayFinal}, ${year}`;
+                            myDiv.append(dateAndTime);
+                            dateAndTime.classList.add("date-time");
+
+                            var textContent = tweeter.content.itemContent.tweet_results.result.legacy.full_text;
+                            var b = textContent.replace(/(?:https?|ftp):\/\/[\n\S]+/g, '');
+                            console.log(b);
+                            const p = document.createElement("h2");
+                            p.innerText = b;
+                            p.classList.add("tweet-content");
+                            myDiv.append(p);
+
+                            var likesConsole = tweeter.content.itemContent.tweet_results.result.legacy.favorite_count;
+                            var likes = document.createElement("p");
+                            likes.innerText = `☆ﾐ(*x_x)liked by ${likesConsole}`;
+                            myDiv.appendChild(likes);
+                            likes.classList.add("likes");
+                        
+                            var retweetsConsole = tweeter.content.itemContent.tweet_results.result.legacy.retweet_count;
+                            var quoteTweetsConsole = tweeter.content.itemContent.tweet_results.result.legacy.quote_count;
+                            var retweetsTotal = retweetsConsole + quoteTweetsConsole;
+                            var retweets = document.createElement("p");
+                            retweets.innerText = `･:*:･ﾟ’☆retweeted and quote tweeted by ${retweetsTotal}`;
+                            myDiv.appendChild(retweets);
+                            retweets.classList.add("retweets");
+
+                            var imagePath = tweeter.content.itemContent.tweet_results.result.legacy.entities;
+                            if (imagePath.hasOwnProperty('media')){ //determine if there is media attached
+                                var images = tweeter.content.itemContent.tweet_results.result.legacy.extended_entities.media;
+                                images.forEach((image)=> { //determine what type of media it is
+                                    //console.log(image.type);
+                                    if (image.type == "photo") {
+                                        imageBox = document.createElement('img');
+                                        imageBox.src = image.media_url_https;
+                                        imageBox.classList.add("image-box");
+                                        myDiv.append(imageBox);
+                                        console.log(imageBox);
+                                    } else if (image.type == "video") {
+                                        videoBox = document.createElement('video');
+                                        videoBox.controls = true;
+                                        videoBox.muted = false;
+                                        videoBox.type = image.video_info.variants[0].content_type;
+                                        videoBox.src = image.video_info.variants[0].url;
+                                        videoBox.classList.add("video-box");
+                                        myDiv.append(videoBox);
+                                        console.log(videoBox);
+                                    }
+                                });
+                            } else {
+                                return null;
+                            };
+                            //load number of likes and number of retweets
+                            
+
+                        };
+
+                    };
+                    contentLoad();
+                } else {
+                    return;
+
+                }; 
+            });
+        };
+        appendTweets();
+    })
+	.catch(function (err) {
+        console.log("Something went wrong!", err);
+    });
+
+
+//discarded username and display name data
+//var displayName = document.createElement("h3");
+// var displayNameConsole = tweeter.content.itemContent.tweet_results.result.tweet.core.user_results.result.legacy.name;
+// displayName.innerText = displayNameConsole;
+// displayName.classList.add("display-name");
+// myDiv.append(displayName);
+
+// var userName = document.createElement("p");
+// var userNameConsole = tweeter.content.itemContent.tweet_results.result.tweet.core.user_results.result.legacy.screen_name;
+// userName.innerText = `@${userNameConsole}`;
+// userName.classList.add("username");
+// myDiv.append(userName);
