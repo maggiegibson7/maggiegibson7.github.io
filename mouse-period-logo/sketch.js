@@ -1,24 +1,5 @@
 let font;
 let numArticles;
-const options = { 
-    method: 'GET',
-    headers: {
-        'X-RapidAPI-Key': '95b5d8ed01msha02b9d913ce6c05p170e68jsn7c8cf00a38c6',
-        'X-RapidAPI-Host': 'real-time-news-data.p.rapidapi.com'
-    }
-};
-fetch('https://real-time-news-data.p.rapidapi.com/search?query=%22national%20enquirer%22&country=US&lang=en&time_published=1d', options)
-    .then(response => response.json())
-    .then(response => {
-        console.log(response);
-        console.log(response.data.length);
-        //dataPoint = response.data.length;
-        window.numArticles = 22;
-        console.log(numArticles);
-        return numArticles;
-    
-    })
-    .catch(err => console.error(err));
 
 function preload(){
     font = loadFont('Oswald-Bold.otf');
@@ -33,9 +14,14 @@ function setup(){
     
 }
 function draw(){
-    console.log(window.numArticles);
+    //console.log(window.numArticles);
     //console.log(pointsEShift);
-
+    let x1 = 100;
+    let y1 = 200;
+    let x2 = mouseX;
+    let y2 = mouseY;
+    let d = dist(x1, y1, x2, y2);
+    window.numArticles = map(mouseX, d, 0, 0, 25);
     background(255);
     shearX(PI/10);
     fill(255,0,0);
