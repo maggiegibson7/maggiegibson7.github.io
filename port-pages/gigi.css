@@ -1,81 +1,104 @@
 html {
-    color: #6E71D1 ;
-    font-family: Helvetica Neue, Arial, sans-serif;
-    background-color: #ededed;
-    margin: 10px;
-  }
-  
-  h1 {
-    font-family: Helvetica Neue, Arial, sans-serif;
-    font-size: 3em;
-    font-weight: 600;
-  }
-  
-  h3 {
-    font-weight: 400;
-  }
-  
-  p {
-    font-size: 1.2em;
-  }
-  
-  header {
-    display: grid;
-    max-width: 2100px;
-    grid-template-columns: 33.3%, 33.3%, 33.3%;
-    grid-template-rows: 300px;
-  }
+  color: #76574B ;
+  background-color: #FFDAEB;
+  margin: 0;
+  padding: 0;
+}
 
-  #intro {
-    grid-column: 3;
-    font-size: .9em;
-    line-height: 1.3em;
-    grid-row: 1;
-    color:#6E71D1;
-  }
-  
-  #title-card {
-    grid-row: 1;
-    grid-column: 1;
-    max-width: 50vw;
-    object-fit: scale-down;
-  }
-  
-  #navigation {
-    grid-row: 1;
-    grid-column: 2;
-    display: block;
-    padding: 10px;
-  }
-  
-  #navigation button {
-    display: block;
-    margin: 10px;
-    width: 15vw;
-    height: 5vh;
-    font-size: 1em;
-    color: #ededed;
-    background-color: #6E71D1;
-    border-radius: 10px;
-    border: 1px solid #6E71D1;
-  }
-  
-  #navigation button:hover {
-    background-color:#ededed;
-    color: #6E71D1;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+
+@font-face {
+  font-family: AlpinaItalic;
+  src: url(/fonts-port/GT-Alpina-Standard-Thin-Italic-Trial.otf);
+}
+
+@font-face {
+  font-family: NeueHaas;
+  src: url(/fonts-port/NeueHaasDisplayThin.ttf);
+}
+h1 {
+  font-family: AlpinaItalic;
+  font-size: 8em;
+  font-weight: 200;
+}
+h2 {
+  font-family: AlpinaItalic;
+  font-size: 3.3em;
+  font-weight: 200;
+  line-height: 1.3em;
+  padding: 0;
+  margin: 0;
+}
+h3 {
+  font-weight: 400;
+  font-family: NeueHaas;
+}
+
+p {
+  font-size: 1.4em;
+  font-family: NeueHaas;
+  padding: 0;
+  margin: 0;
+}
+#title {
+  font-family: AlpinaItalic;
+  font-weight: 100;
+  padding: 0;
+}
+
+#navigation button {
+  display: block;
+  margin: 10px;
+  width: 13vw;
+  margin-left: 1vw;
+  height: 5vh;
+  font-size: 1em;
+  color: #FFDAEB;
+  background-color: #76574B;
+  text-align: left;
+  border: none;
+  font-family: AlpinaItalic;
+  font-size: 2.7em;
+}
+
+#navigation button:hover {
+  text-shadow: 0 0 5px #FFDAEB;
+  transform: translate(10px);
+}
+
+#sidebar {
+  position: fixed;
+  height: 100%;
+  width: 17vw;
+  background-color:#76574B;
+}
+
+.wrapper {
+  left: 18vw;
+  position: absolute;
+  top: 15vh;
+  width: 81%;
+}
 
   .row {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 4px;
+    position: absolute;
+    left: 18vw;
+    top: 45vh;
   }
   
   /* Create four equal columns that sits next to each other */
   .column {
     flex: 33%;
     max-width: 32%;
-    padding: 0 4px;
+    padding-right: 5px;
   }
   
   .column img {
@@ -99,3 +122,80 @@ html {
       max-width: 100%;
     }
   }
+
+#date {
+  position: absolute;
+  width: 99%;
+  top: 2vh;
+  left: 79%;
+}
+
+#descr {
+  width: 78%;
+  position: absolute;
+  top: 9vh;
+}
+
+#location {
+  position: absolute;
+  width: 99%;
+  top: 5.5vh;
+  left: 79%;
+}
+
+#links a {
+  display: block;
+  font-family: NeueHaas;
+  font-size: 1.6em;
+  color: #76574B;
+  text-decoration: underline;
+  line-height: 1.3em;
+}
+
+#links {
+  position: absolute;
+  top: 9vh;
+  left: 79%;
+}
+
+#links a:hover {
+  text-shadow: 0 0 5px #76574B;
+  translate: transformX(-5);
+}
+
+#fun {
+  font-family: AlpinaItalic;
+  font-weight: 200;
+  position: fixed;
+  z-index: 5;
+  text-shadow: 1px 1px 10px #FFDAEB;
+  left: 18vw;
+  font-size: 3.3em;
+}
+
+#home {
+  position: fixed;
+  width: 98%;
+  text-align: right;
+  display: block;
+  font-family: NeueHaas;
+  font-size: 1.6em;
+  color: #76574B;
+  text-decoration: underline;
+  line-height: 1.3em;
+  top: 1vh;
+  z-index: 5;
+  padding: 5px;
+  text-shadow: 0 0 5px #FFDAEB;
+}
+
+#home:hover {
+  text-shadow: 0 0 5px #76574B;
+}
+
+#little-date {
+  font-size: 0.8em;
+}
+
+
+

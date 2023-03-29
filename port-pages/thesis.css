@@ -1,0 +1,182 @@
+html {
+    color: #76574B ;
+    background-color: #FFDAEB;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  
+  
+  @font-face {
+    font-family: AlpinaItalic;
+    src: url(/fonts-port/GT-Alpina-Standard-Thin-Italic-Trial.otf);
+  }
+  
+  @font-face {
+    font-family: NeueHaas;
+    src: url(/fonts-port/NeueHaasDisplayThin.ttf);
+  }
+  h1 {
+    font-family: AlpinaItalic;
+    font-size: 8em;
+    font-weight: 200;
+
+  }
+  h2 {
+    font-family: AlpinaItalic;
+    font-size: 3.3em;
+    font-weight: 200;
+    line-height: 1em;
+    margin: 0;
+    padding-bottom: 15px;
+  }
+  h3 {
+    font-weight: 400;
+    font-family: NeueHaas;
+  }
+  
+  p {
+    font-size: 1.6em;
+    font-family: NeueHaas;
+    padding: 0;
+    margin: 0;
+  }
+  #title {
+    font-family: AlpinaItalic;
+    font-weight: 100;
+    padding: 0;
+  }
+  
+  #navigation button {
+    display: block;
+    margin: 10px;
+    width: 13vw;
+    margin-left: 1vw;
+    height: 5vh;
+    font-size: 1em;
+    color: #FFDAEB;
+    background-color: #76574B;
+    text-align: left;
+    border: none;
+    font-family: AlpinaItalic;
+    font-size: 2.7em;
+  }
+  
+  #navigation button:hover {
+    text-shadow: 0 0 5px #FFDAEB;
+    transform: translate(10px);
+  }
+  
+  #sidebar {
+    position: fixed;
+    height: 100%;
+    width: 17vw;
+    background-color:#76574B;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 18vw;
+    top: 140vh;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 49%;
+    max-width: 48%;
+    padding-right: 5px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+
+  .wrapper {
+    left: 18vw;
+    position: absolute;
+    top: 15vh;
+    width: 40%;
+  }
+
+  #fun {
+    font-family: AlpinaItalic;
+    font-weight: 200;
+    position: fixed;
+    z-index: 5;
+    text-shadow: 1px 1px 10px #FFDAEB;
+    left: 18vw;
+    font-size: 3.3em;
+  }
+  
+  #home {
+    position: fixed;
+    width: 98%;
+    text-align: right;
+    display: block;
+    font-family: NeueHaas;
+    font-size: 1.6em;
+    color: #76574B;
+    text-decoration: underline;
+    line-height: 1.3em;
+    top: 1vh;
+    z-index: 5;
+    padding: 5px;
+    text-shadow: 0 0 5px #FFDAEB;
+  }
+  
+  #home:hover {
+    text-shadow: 0 0 5px #76574B;
+  }
+  
+  #little-date {
+    font-size: 0.8em;
+  }
+
+  .spacer {
+    height: 2vh;
+  }
+
+
+  #location {
+    position: absolute;
+    width: 99%;
+    top: 5.5vh;
+    left: 79%;
+  }
+  
+  #links a {
+    display: block;
+    font-family: NeueHaas;
+    font-size: 1.6em;
+    color: #76574B;
+    text-decoration: underline;
+    line-height: 1.3em;
+  }
+  
+  
+  #links a:hover {
+    text-shadow: 0 0 5px #76574B;
+    translate: transformX(-5);
+  }
+
+  #image-bank {
+    position: absolute;
+    left: 59%;
+    top: 15vh;
+    width: 39%;
+  }
+
+  #image-bank img {
+    object-fit: cover;
+    width: 39vw;
+  }
