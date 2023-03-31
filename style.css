@@ -94,16 +94,21 @@ p {
   margin-top: 10vh;
 }
 
-.emph a{
+.emph button{
   font-family: AlpinaItalic;
   color: #76574B;
   text-decoration: none;
   border-bottom: 1.5px solid #76574B;
   line-height: 0.8em;
   display: inline-block;
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 1em;
 }
 
-.emph:hover{
+.emph button:hover{
   text-shadow: 0 0 5px #76574B;
 }
 
@@ -196,5 +201,54 @@ img {
 ::-webkit-scrollbar-thumb {
   background: #76574B;
   width: 40px;
+}
+
+#graphic-image-bank{
+  display: none;
+  position: absolute;
+  margin-left: 18vw;
+  margin-top: 13vh;
+}
+
+.column img {
+  width: 100%;
+  vertical-align: middle;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+.column{
+  flex: 33%;
+  max-width: 32%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+#new-fun {
+  position: fixed;
+  margin-left: 18vw;
+  font-size: 3.8em;
+  z-index: 5;
+  text-shadow: 1px 1px 10px #FFDAEB;
+  font-family: AlpinaItalic;
+  font-weight: 200;
+}
+
+#remove-graph {
+  position: fixed;
+  width: 98%;
+  margin-top: 2vh;
+  text-align: right;
+  font-size: 2em;
+  font-family: NeueHaas;
+  border: none;
+  background: none;
+  color: #76574B;
+  text-decoration: underline;
+  text-shadow: 1px 1px 10px #FFDAEB;
+}
+
+#remove-graph:hover{
+  text-shadow: 0 0 5px #76574B;
 }
 /* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/nature/nat-4/nat386.ani), url(https://cur.cursors-4u.net/nature/nat-4/nat386.png), auto !important;} /* End https://www.cursors-4u.com */

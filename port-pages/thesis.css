@@ -102,10 +102,14 @@ html {
   }
 
   .wrapper {
-    left: 18vw;
     position: absolute;
+    left: 18vw;
     top: 15vh;
     width: 40%;
+  }
+
+  .wrapper img {
+    width: 100%;
   }
 
   #fun {
@@ -179,4 +183,18 @@ html {
   #image-bank img {
     object-fit: cover;
     width: 39vw;
+  }
+  #live {
+    display: block;
+    font-family: NeueHaas;
+    font-size: 1.6em;
+    color: #76574B;
+    text-decoration: underline;
+    line-height: 1.3em;
+    padding-bottom: 10px;
+  }
+
+  #live:hover {
+    text-shadow: 0 0 5px #76574B;
+    translate: transformX(-5);
   }
