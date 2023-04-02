@@ -52,7 +52,17 @@ p {
   padding: 0;
 }
 
-#navigation button {
+#fun {
+  font-family: AlpinaItalic;
+  font-weight: 200;
+  position: fixed;
+  z-index: 5;
+  text-shadow: 1px 1px 10px #FFDAEB;
+  left: 18vw;
+  font-size: 3.3em;
+}
+
+#navigation a {
   display: block;
   margin: 10px;
   width: 13vw;
@@ -63,8 +73,14 @@ p {
   background-color: #76574B;
   text-align: left;
   border: none;
-  font-family: AlpinaItalic;
+  font-family: NeueHaas;
   font-size: 2.7em;
+  text-decoration: none;
+}
+
+#navigation button {
+  background: none;
+  border: none;
 }
 
 #navigation button:hover {
@@ -175,7 +191,6 @@ p {
 
 #home {
   position: fixed;
-  width: 98%;
   text-align: right;
   display: block;
   font-family: NeueHaas;
@@ -183,7 +198,8 @@ p {
   color: #76574B;
   text-decoration: underline;
   line-height: 1.3em;
-  top: 1vh;
+  top: 5px;
+  right: 5px;
   z-index: 5;
   padding: 5px;
   text-shadow: 0 0 5px #FFDAEB;
@@ -195,6 +211,80 @@ p {
 
 #little-date {
   font-size: 0.8em;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+  #sidebar {
+    width: 100vw;
+    height: 18vh;
+    padding: 5px;
+    z-index: 100;
+    overflow-x: hidden;
+  }
+  #navigation button{
+    display:inline-block;
+    width: 31%;
+    border: 1px solid #FFDAEB;
+    font-size: 0.6em;
+    margin-top: 5px;
+    z-index: 100;
+  }
+
+  #intro {
+    margin-top: 20vh;
+    z-index: -1;
+    left: 2vw;
+    position: absolute;
+    width: 96vw;
+    font-size: 1.1em;
+    top: 1vh;
+  }
+
+  .wrapper {
+    margin-top: 5vh;
+    left: 2vw;
+    font-size: 0.9em;
+    width: 98%;
+    z-index: -1;
+  }
+  #date {
+    position: static;
+  }
+  #location {
+    position: static;
+  }
+  #descr {
+    position: static;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  #links {
+    position: static;
+  }
+
+  .row {
+    top: 65vh;
+    left: 2vw;
+    overflow-x: hidden;
+  }
+
+  #home {
+    margin-top: 56.5vh;
+    font-size: 1.4em;
+    text-align: left;
+    margin-left: 2vw;
+    position: absolute;
+  }
+
+  #fun {
+    display: none;
+  }
 }
 
 

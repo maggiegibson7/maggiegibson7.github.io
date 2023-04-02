@@ -53,7 +53,7 @@ html {
     padding: 0;
   }
   
-  #navigation button {
+  #navigation a {
     display: block;
     margin: 10px;
     width: 13vw;
@@ -64,8 +64,14 @@ html {
     background-color: #76574B;
     text-align: left;
     border: none;
-    font-family: AlpinaItalic;
+    font-family: NeueHaas;
     font-size: 2.7em;
+    text-decoration: none;
+  }
+  
+  #navigation button {
+    background: none;
+    border: none;
   }
   
   #navigation button:hover {
@@ -124,7 +130,6 @@ html {
   
   #home {
     position: fixed;
-    width: 98%;
     text-align: right;
     display: block;
     font-family: NeueHaas;
@@ -132,7 +137,8 @@ html {
     color: #76574B;
     text-decoration: underline;
     line-height: 1.3em;
-    top: 1vh;
+    top: 5px;
+    right: 5px;
     z-index: 5;
     padding: 5px;
     text-shadow: 0 0 5px #FFDAEB;
@@ -197,4 +203,80 @@ html {
   #live:hover {
     text-shadow: 0 0 5px #76574B;
     translate: transformX(-5);
+  }
+
+  .image-col-mobile {
+    display: none;
+  }
+
+  @media only screen and (max-width: 600px) {
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    #sidebar {
+      width: 100vw;
+      height: 18vh;
+      padding: 5px;
+      z-index: 100;
+      overflow-x: hidden;
+    }
+    #navigation button{
+      display:inline-block;
+      width: 31%;
+      border: 1px solid #FFDAEB;
+      font-size: 0.6em;
+      margin-top: 5px;
+      z-index: 100;
+    }
+  
+    .wrapper {
+      margin-top: 9vh;
+      left: 2vw;
+      font-size: 0.9em;
+      width: 96%;
+      z-index: -1;
+      overflow-x: hidden;
+    }
+    #date {
+      position: static;
+    }
+    #location {
+      position: static;
+    }
+    #descr {
+      position: static;
+      width: 100%;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  
+    #links {
+      position: static;
+    }
+  
+    .row {
+      top: 65vh;
+      left: 2vw;
+      overflow-x: hidden;
+    }
+  
+    #home {
+      position: absolute;
+      margin-top: 18vh;
+      width: 96%;
+      text-align: left;
+      margin-left: 2vw;
+    }
+  
+    #fun {
+      display: none;
+    }
+
+    #image-bank {
+      display: none;
+    }
+    .image-col-mobile {
+      display: block;
+    }
   }

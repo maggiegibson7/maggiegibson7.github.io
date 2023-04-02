@@ -24,8 +24,10 @@ body {
 }
 h1 {
   font-family: AlpinaItalic;
-  font-size: 8em;
+  font-size: 5em;
   font-weight: 200;
+  padding: 0;
+  margin: 0;
 }
 h2 {
   font-family: AlpinaItalic;
@@ -41,7 +43,7 @@ h3 {
 }
 
 p {
-  font-size: 1.6em;
+  font-size: 1.2em;
   font-family: NeueHaas;
   padding: 0;
   margin: 0;
@@ -63,7 +65,7 @@ p {
   background-color: #76574B;
   text-align: left;
   border: none;
-  font-family: AlpinaItalic;
+  font-family: NeueHaas;
   font-size: 2.7em;
   text-decoration: none;
 }
@@ -71,6 +73,22 @@ p {
 #navigation button {
   background: none;
   border: none;
+}
+
+#about-button {
+  display: block;
+  margin: 10px;
+  width: 13vw;
+  margin-left: 1vw;
+  height: 5vh;
+  font-size: 1em;
+  color: #FFDAEB;
+  background-color: #76574B;
+  text-align: left;
+  border: none;
+  font-family: NeueHaas;
+  font-size: 2.2em;
+  text-decoration: none;
 }
 
 #navigation button:hover {
@@ -83,15 +101,28 @@ p {
   font-size: 2.4em;
   top: 2vh;
   padding: 0;
-  line-height: 1.6em;
-  width: 82%;
+  line-height: 1.3em;
+  width: 50%;
   position: absolute;
+}
+
+#image-right {
+  position: fixed;
+  width: 13vw;
+  right: 5px;
+  bottom: 5px;
+  z-index: 20;
+}
+
+#image-right img {
+  width: 3vw;
+  height: auto;
 }
 
 #fun {
   font-family: AlpinaItalic;
   font-weight: 200;
-  position: fixed;
+  position: absolute;
   z-index: 5;
   text-shadow: 1px 1px 10px #FFDAEB;
 }
@@ -175,10 +206,18 @@ img {
 }
 
 #instructions {
-  font-size: 2.4em;
+  font-size: 1em;
   position: absolute;
-  top: 90vh;
-  left: 18vw;
+  top: 92vh;
+}
+
+#random-stuff {
+  position: absolute;
+  height: 94vh;
+  width: 29vw;
+  left: 51vw;
+  top: 2vh;
+  overflow: hidden;
 }
 
 .scoot{
@@ -209,11 +248,12 @@ img {
   width: 40px;
 }
 
-#graphic-image-bank{
+.image-bank{
   display: none;
   position: absolute;
   margin-left: 18vw;
   margin-top: 13vh;
+  flex-wrap: wrap;
 }
 
 .column img {
@@ -226,11 +266,10 @@ img {
 .column{
   flex: 33%;
   max-width: 32%;
-  display: inline-block;
   margin-right: 5px;
 }
 
-#new-fun {
+.new-fun {
   position: fixed;
   margin-left: 18vw;
   font-size: 3.8em;
@@ -240,12 +279,11 @@ img {
   font-weight: 200;
 }
 
-#remove-graph {
+.remove {
   position: fixed;
-  width: 98%;
-  margin-top: 2vh;
-  text-align: right;
-  font-size: 2em;
+  top: 5px;
+  right: 5px;
+  font-size: 1.2em;
   font-family: NeueHaas;
   border: none;
   background: none;
@@ -254,7 +292,270 @@ img {
   text-shadow: 1px 1px 10px #FFDAEB;
 }
 
-#remove-graph:hover{
+.remove:hover{
   text-shadow: 0 0 5px #76574B;
 }
-/* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/nature/nat-4/nat386.ani), url(https://cur.cursors-4u.net/nature/nat-4/nat386.png), auto !important;} /* End https://www.cursors-4u.com */
+
+#about {
+  display: none;
+  margin-left: 18vw;
+  position:absolute;
+}
+
+.column-1 {
+  width: 25vw;
+  display: inline-block;
+  position: fixed;
+  top: 19vh;
+  border-right: 1px solid #76574B;
+  height: 100%;
+}
+
+.column-2 {
+  width: 30vw;
+  display: inline-block;
+  left: 26vw;
+  position: absolute;
+  top: 19vh;
+  z-index: -1;
+}
+
+.column-3 {
+  position: absolute;
+  left: 57vw;
+  top: 19vh;
+  width: 24vw;
+}
+
+#profile {
+  width: 98%;
+  height: auto;
+  object-fit: cover;
+}
+
+.row-1 {
+  position: fixed;
+  background-color: #FFDAEB;
+  width: 100vw;
+  height: 18vh;
+  z-index: 5;
+  border-bottom: solid 1px #76574B;
+}
+
+.spacer-2 {
+  height: 3vh;
+}
+
+h3 {
+  font-family: AlpinaItalic;
+  font-size: 2.2em;
+  padding-bottom: 5px;
+  margin: 0;
+}
+
+.little-spacer {
+  height: 1.5vh;
+}
+
+#home-about {
+  position: fixed;
+  top: 1vh;
+  text-align: right;
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  font-family: 'NeueHaas';
+  color: #76574B;
+  right: 5px;
+  text-decoration: underline;
+}
+
+#home-about:hover {
+  text-shadow: 0 0 5px #76574B;
+}
+
+#end {
+  width: 98%;
+}
+
+#scroll-top {
+  background: none;
+  border: none;
+  color: #76574B;
+  text-decoration: underline;
+  font-size: 1.5em;
+  font-family: NeueHaas;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+  #sidebar {
+    width: 100%;
+    height: 18vh;
+  }
+
+  #navigation {
+    display: grid;
+    grid-template-columns: 49% 49%;
+    grid-template-rows: 49% 49%;
+  }
+  #navigation button{
+    display:inline-block;
+    width: 99%;
+    height: 8vh;
+    border: 1px solid #FFDAEB;
+    z-index: 100;
+    left: 5px;
+    margin-left: 4px;
+    margin-top: 4px;
+    padding: 0;
+  }
+
+  #navigation a {
+    font-size: 1.7em;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    height: auto;
+  }
+
+  #about-button {
+    font-size: 1.5em;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  #image-right {
+    display: none;
+  }
+
+  #intro {
+    margin-top: 20vh;
+    z-index: -1;
+    left: 2vw;
+    position: absolute;
+    width: 96vw;
+    font-size: 1.4em;
+    top: 1vh;
+    
+  }
+
+  #block {
+    overflow-wrap: word-break;
+  }
+
+  #instructions {
+    font-size: 1.4em;
+    top: 74vh;
+    left: 2vw;
+    padding: 0;
+    margin: 0;
+  }
+
+  .wrapper {
+    left: 2vw;
+    z-index: -1;
+  }
+
+  h2{
+    font-size: 2em;
+  }
+  .view-more button{
+    position: relative;
+    text-align: left;
+    padding: 5px;
+    margin: 2px;
+  }
+  .view-more a{
+    position: flex;
+    font-size: 0.8em;
+  }
+  .images {
+    height: 41vh;
+    overflow-x: scroll;
+    display: flex;
+    width: 98vw;
+    overflow-y: hidden;
+  }
+
+  img {
+    height: 40vh;
+  }
+
+  .ctd {
+    width: 98%;
+    font-size: 0.9em;
+    position: relative;
+    margin-top: 5px;
+  }
+
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .image-bank {
+    width: 98vw;
+    margin-top: 34vh;
+    margin-left: 2vw;
+  }
+
+  .new-fun {
+    font-size: 2em;
+    margin-top: 23vh;
+    margin-left: 2vw;
+  }
+
+  .remove {
+    font-size: 1.3em;
+    margin-top: 19vh;
+    text-align: left;
+  }
+
+  #about {
+    margin-left: 0;
+    width: 100%;
+  }
+  .row-1 {
+    font-size: 0.75em;
+    padding: 10px;
+    height: 15vh;
+  }
+
+  #home-about {
+    position: static;
+    font-size: 1.4em;
+  }
+
+  .column-2 {
+    margin-top: 19vh;
+    position: static;
+    width: 96%;
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+
+  .column-1 {
+    display: none;
+    position: static;
+    width: 96%;
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+
+  .column-3 {
+    position: static;
+    width: 96%;
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+
+  #random-stuff {
+    display: none;
+  }
+
+}

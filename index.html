@@ -13,8 +13,7 @@
 
   <div id="sidebar">
     <div id="navigation">
-      <button><a href="about.html">about *</a></button>
-      <button><a href="contact.html">contact *</a></button>
+      <button id="about-button">about *</button>
       <button><a href="https://vimeo.com/user103785312">vimeo *</a></button>
       <button><a href="https://www.linkedin.com/in/margaret-gibson-5bb09b229/">linkedin *</a></button>
       <button><a href="https://github.com/maggiegibson7">github *</a></button>
@@ -24,13 +23,18 @@
       <div id = "intro">
         <p id="fun">(´｡• ω •｡`) ♡</p>
         <p id="block"><span id="title">maggie gibson</span> is currently a senior at parsons school of design studying communication design. she is passionate about <span class="emph"><button id="graph-button">graphic design</button></span>, <span class="emph"><button id="web-button">web design</button></span>, and <span class="emph"><button id="ill-button">illustration</button></span>. she specializes in creative coding and front-end development; this website is hand coded!</p>
-        <div class="spacer"></div>
-        <p>this website is under construction currently (✯◡✯)</p>
+        <div id="image-right">
+          <img src="pixels/peekaboo.gif">
+          <img src="pixels/pompom.gif">
+          <img src="pixels/rilakumma.gif">
+        </div>
+        <div id="random-stuff"></div>
+        <div id="instructions">
+          <p>scroll to see work⤵</p>
+        </div>
       </div>
 
-    <div id="instructions">
-      <p>scroll to see work⤵</p>
-    </div>
+    
 
     <div class="wrapper">
       <div class="thesis">
@@ -88,6 +92,7 @@
       <div class="ctd"><p>a book inspired by the graphic design style of nintendo, a collection of 256 images that inspire me and motivate me in my artistic practice and personal life &#9787</p></div>
 
       <div class="images">
+        <img src="imgs/gifs/256-imgbook.gif">
         <img src="imgs/Image-Book/one.png">
         <img src="imgs/Image-Book/two.png">
         <img src="imgs/Image-Book/three.png">
@@ -124,27 +129,184 @@
   </div>
 
   <div class="spacer"></div>
-</div>
-<div id="graphic-image-bank">
+
+  <div class="mr-frog">
+    <div class="description"><h2>Mr. Frog's NYC Mutual Aid Database</h2></div>
+    <div class="ctd"><p>a mutual aid database with interface, created with airtable CMS, javascript, HTML, and css. illustrations and code are my own!!</p></div>
+    <div class="images">
+      <img src="imgs/NYC-mutual-aid/mr-frog.gif">
+      <img src="imgs/NYC-mutual-aid/frog-1.png">
+      <img src="imgs/NYC-mutual-aid/frog-2.png">
+    </div>
+    </div>
+
+    <div class="spacer"></div>
+
+  <div class="rachel-playlist">
+    <div class="description"><h2>Rachel's Playlist Database</h2></div>
+    <div class="ctd"><p>a database organizing and categorizing my friend rachel's throwback playlist! created with airtable CMS, javascript, HTML, and css</p></div>
+    <div class="images">
+      <img src="imgs/rachel-playlist/rachel-playlist.gif">
+      <img src="imgs/rachel-playlist/playlist-1.png">
+      <img src="imgs/rachel-playlist/playlist-2.png">
+      <img src="imgs/rachel-playlist/playlist-3.png">
+      <img src="imgs/rachel-playlist/playlist-4.png">
+    </div>
+  </div>
+
+  <div class="spacer"></div>
+  <h2 id="end">hey! you've reached the end for now! thanks for looking at my work o(>ω<)o</h2>
+  <button id="scroll-top">return to top</button>
+  <div class="spacer"></div>
+  </div>
+
+<div id="graphic-image-bank" class="image-bank">
   <div class="column">
   <img src="imgs/gifs/digi-animation.gif">
   <img src="imgs/gigi/usc-pres/usc-pres.gif">
-  <img src="imgs/gifs/digi-web.gif">
+  <img src="imgs/graph-bank/font-book-1.png">
   <img src="imgs/Image-Book/two.png">
 </div>
 <div class="column">
   <img src="imgs/gigi/nikon-deck/gigi-nikon.gif">
+  <img src="imgs/graph-bank/women-world-1.jpg">
   <img src="imgs/digiblox/social-media/sm-2.png">
   <img src="imgs/gifs/hazy-mae-graphic.gif">
 </div>
 <div class="column">
   <img src="imgs/gifs/256-imgbook.gif">
   <img src="imgs/gigi/no-mock/tweet-1.png">
+  <img src="imgs/graph-bank/font-book-2.jpg">
   <img src="imgs/Image-Book/seven.png">
   <img src="imgs/digiblox/social-media/sm-3.png">
 </div>
 </div>
-<button id = 'remove-graph'>return to main(☆▽☆)</button>
-  </main>
+<button class = 'remove' id="remove-graph">return to main(☆▽☆)</button>
+
+<div class="image-bank" id="illustration-bank">
+  <div class="column">
+    <img src="imgs/illustration-bank/frame.png">
+    <img src="imgs/illustration-bank/journal-scan_Page_1.png">
+    <img src="imgs/illustration-bank/heart-trish.png">
+  </div>
+  <div class="column">
+    <img src="imgs/gifs/self portrait-high.gif">
+    <img src="imgs/illustration-bank/con-1.jpg">
+    <img src="imgs/illustration-bank/heart-erika.png">
+    <img src="imgs/illustration-bank/journal-scan_Page_2.png">
+  </div>
+  <div class="column">
+    <img src="imgs/gifs/bunny-gif-animate.gif">
+    <img src="imgs/illustration-bank/butterfly.jpeg">
+    <img src="imgs/illustration-bank/con-2.JPG">
+    <img src="imgs/illustration-bank/con-4.JPG">
+  </div>
+</div>
+<button class = 'remove' id="remove-illustration">return to main(☆▽☆)</button>
+
+<div class="image-bank" id="web-bank">
+  <div class="column">
+    <img src="imgs/web-bank/create-your-own.gif">
+    <img src="imgs/gifs/digi-web.gif">
+    <img src="imgs/thesis/web-4.gif">
+    <img src="imgs/b-moore/bmo-home.png">
+    <img src="imgs/b-moore/bmo-shopscroll.png">
+  </div>
+  <div class="column">
+    <img src="imgs/thesis/web-2.gif">
+    <img src="imgs/gifs/midterm.gif">
+    <img src="imgs/web-bank/garfield-1.png">
+    <img src="imgs/thesis/web-3.gif">
+  </div>
+  <div class="column">
+    <img src="imgs/NYC-mutual-aid/mr-frog.gif">
+    <img src="imgs/rachel-playlist/rachel-playlist.gif">
+    <img src="imgs/web-bank/wiki-1.png">
+    <img src="imgs/b-moore/bmo-website.png">
+    <img src="imgs/web-bank/garfield-2.png">
+    
+  </div>
+</div>
+<button class = 'remove' id="remove-web">return to main(☆▽☆)</button>
+
+<div id="about">
+  <div class="row-1">
+  <h1>Maggie Gibson</h1>
+  <h2>Graphic and Web Designer</h2>
+  <button id="home-about">return to main(☆▽☆)</button>
+  </div>
+  <div class="column-1">
+  <img id="profile" src="imgs/headshot.jpeg">
+  </div>
+  <div class="column-2">
+  
+  <h3>It’s Gigi LLC, Graphic Designer</h3>
+  <p>NOVEMBER 2022 - PRESENT, NEW YORK, NY</p>
+  <div class="little-spacer"></div>
+  <p>Designed social media and website content with custom designed and illustrated assets, created and evolved consistent brand identities for different projects for multiple platforms, and utilized design solutions for information sharing across platforms and presentations.</p>
+  <div class="spacer-2"></div>
+  
+  <h3>Digiblox.io, Creative Direction Intern</h3>
+  <p>JUNE 2022 - NOVEMBER 2022, DALLAS, TX</p>
+  <div class="little-spacer"></div>
+  <p>Created new and innovative e-commerce websites, developed social media outreach marketing materials and strategies, and oversaw creative direction of projects.</p>
+  <div class="spacer-2"></div>
+
+  <h3>Hazy Mae, Graphic Design Intern</h3>
+  <p>FEBRUARY 2022 - JUNE 2022, NEW YORK, NY</p>
+  <div class="little-spacer"></div>
+  <p>Designed business merchandise from business cards to wallpaper, creating digital marketing content, including motion graphics and text layouts, for social media, and organized a design system for inventory and business endeavors.</p>
+  <div class="spacer-2"></div>
+
+  <h3>Dallas Museum of Art, Teen Advisory Council Member</h3>
+  <p>AUGUST 2017 - JUNE 2019, DALLAS, TX</p>
+  <div class="little-spacer"></div>
+  <p>Organized and brainstormed community art events, created marketing and branding for events to promote engagement, and collaborated with fellow council members and assisted in delegating responsibilities.</p>
+  <div class="spacer-2"></div>
+  
+</div>
+<div class="column-3">
+  <h3>Profile</h3>
+  <div class="little-spacer"></div>
+  <p>Creative and motivated graphic designer and web designer based out of NYC and TX. I create design systems and content that are functional, organized, and custom-tailored to the needs of the project. I combine my design knowledge and skills with my passion for coding to create immersive and responsive web design and user experiences.</p>
+  <div class="spacer-2"></div>
+
+  <h3>Education</h3>
+  <div class="little-spacer"></div>
+  <p>Parsons School of Design</p>
+  <p>AUGUST 2019 - MAY 2023</p>
+  <p>BFA — Communication Design</p>
+  <div class="spacer-2"></div>
+
+  <h3>Toolkit</h3>
+  <div class="little-spacer"></div>
+  <p>InDesign</p>
+  <p>Illustrator</p>
+  <p>Photoshop</p>
+  <p>AfterEffects</p>
+  <p>Procreate</p>
+  <p>Javascript</p>
+  <p>HTML</p>
+  <p>CSS</p>
+  <p>p5.js</p>
+  <p>Figma</p>
+  <p>procressing.py</p>
+  <div class="spacer-2"></div>
+
+  <h3>Skills</h3>
+  <div class="little-spacer"></div>
+  <p>Creative Coding</p>
+  <p>User Interaction and Experience</p>
+  <p>Branding and Identity</p>
+  <p>Web Design and Development</p>
+  <p>Digital Illustration</p>
+  <p>Motion Design and Motion Graphics</p>
+  <p>Digital Layout</p>
+  <p>Data Visualization</p>
+  <div class="spacer-2"></div>
+</div>
+</div>
+</div>
+</main>
 </body>
 </html>
