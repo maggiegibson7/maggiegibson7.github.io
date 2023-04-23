@@ -11,7 +11,7 @@ fetch(opensheet_uri)
     .then(function (data) {
         //console.log(data);
 		var babyToys = data;
-        babyToys.length = 19;
+        babyToys.length = 20;
         console.log(babyToys);
         babyToys.forEach((element, i)=> {
             var tagDiv = document.createElement('div');

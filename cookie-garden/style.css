@@ -1,0 +1,16 @@
+.petal{
+    border-radius: 50%;
+    background-color: pink;
+    height: 100px;
+    width: 100px;
+    position: fixed;
+}
+
+#container{
+    width: 50vw;
+    height: 50vw;
+    position: fixed;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+}
