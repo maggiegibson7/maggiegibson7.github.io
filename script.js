@@ -1,25 +1,5 @@
 console.log('hello');
 var wrapper = document.querySelector(".wrapper");
-var scrollIntro = document.querySelector("#instructions");
-//const check = scrollIntro.getBoundingClientRect();
-//console.log(check);
-
-function removeScroll(){
-    console.log('im running!');
-    //console.log(window.pageYOffset);
-    if(window.pageYOffset > 4){
-        scrollIntro.style.display = "none";
-        //wrapper.style.top = "60vh";
-        //console.log(check.top);
-        wrapper.classList.add('scoot');
-    } else {
-        scrollIntro.style.display = "block";
-        //wrapper.style.top = '100vh';
-        wrapper.classList.remove('scoot');
-    }
-}
-
-window.addEventListener("scroll", removeScroll);
 
 var graphicButton = document.querySelector("#graph-button");
 var webButton = document.querySelector("#web-button");
@@ -41,7 +21,7 @@ removeWebButton.style.display = 'none';
 var myDiv = document.createElement('div');
 myDiv.style.display = 'none';
 document.body.appendChild(myDiv);
-var newFun = document.createElement('p');
+var newFun = document.createElement('h2');
 newFun.classList.add('new-fun');
 myDiv.appendChild(newFun);
 
@@ -49,11 +29,11 @@ myDiv.appendChild(newFun);
 function showGraphic(){
         myDiv.style.display = 'block';
         //myDiv.appendChild(fun);
-        fun.style.display = 'none';
+        // fun.style.display = 'none';
         wrapper.style.display = 'none';
         intro.style.display = 'none';
         newFun.innerHTML = "(´｡• ω •｡`) ♡ graphic design sampling";
-        scrollIntro.style.display = 'none';
+        // scrollIntro.style.display = 'none';
         myDiv.appendChild(graphBank);
         graphBank.style.display = 'flex';
         removeGraphButton.style.display = 'block';
@@ -71,13 +51,13 @@ const illusBank = document.querySelector("#illustration-bank");
 function showIllus(){
     myDiv.style.display = 'block';
     //myDiv.appendChild(fun);
-    fun.style.display = 'none';
+    // fun.style.display = 'none';
     wrapper.style.display = 'none';
     intro.style.display = 'none';
     newFun.innerHTML = "(´｡• ω •｡`) ♡ illustration sampling";
     newFun.style.display = 'block';
     //myDiv.appendChild(newFunOne);
-    scrollIntro.style.display = 'none';
+    // scrollIntro.style.display = 'none';
     myDiv.appendChild(illusBank);
     illusBank.style.display = 'flex';
     removeIllusButton.style.display = 'block';
@@ -94,13 +74,13 @@ const webBank = document.querySelector("#web-bank");
 function showWeb(){
     myDiv.style.display = 'block';
     //myDiv.appendChild(fun);
-    fun.style.display = 'none';
+    // fun.style.display = 'none';
     wrapper.style.display = 'none';
     intro.style.display = 'none';
     newFun.innerHTML = "(´｡• ω •｡`) ♡ web design sampling";
     newFun.style.display = 'block';
     //myDiv.appendChild(newFunOne);
-    scrollIntro.style.display = 'none';
+    // scrollIntro.style.display = 'none';
     myDiv.appendChild(webBank);
     webBank.style.display = 'flex';
     removeWebButton.style.display = 'block';
@@ -170,11 +150,11 @@ const scrollButton = document.querySelector('#scroll-top');
 scrollButton.addEventListener('click', scrolltoTop);
 
 var greetingArray = new Array;
-greetingArray[0] = 'hello! 	ヽ(*・ω・)ﾉ'
-greetingArray[1] = "hi hi! 。.:☆*:･'(*⌒―⌒*)))"
-greetingArray[2] = "hey!! \(★ω★)/"
-greetingArray[3] = "it's nice to meet you! (〃＾▽＾〃)"
-greetingArray[4] = "how's it going? °˖✧◝(⁰▿⁰)◜✧˖°"
+greetingArray[0] = "hello! i'm maggie gibson ヽ(*・ω・)ﾉ"
+greetingArray[1] = "hi hi! i'm maggie gibson。.:☆*:･'(*⌒―⌒*)))"
+greetingArray[2] = "hey!! i'm maggie gibson\(★ω★)/"
+greetingArray[3] = "it's nice to meet you! i'm maggie gibson (〃＾▽＾〃)"
+greetingArray[4] = "how's it going? i'm maggie gibson °˖✧◝(⁰▿⁰)◜✧˖°"
 
 const randomDiv = document.querySelector('#random-stuff')
 const randomGreet = document.querySelector('#random-greeting');
@@ -184,10 +164,38 @@ function randomGreeting(){
     var newNumber = Math.floor(Math.random()*greetingArray.length);
     textDOM.innerHTML = greetingArray[newNumber];
     randomDiv.appendChild(textDOM);
-    var newTopPosition = Math.random() * 90;
-    textDOM.style.top = `${newTopPosition}vh`;
+    // var newTopPosition = (Math.random() * 73) + (26);
+    // textDOM.style.left = `${newTopPosition}vw`;
     textDOM.style.position = 'absolute';
-    textDOM.style.fontSize = '1.8em';
+    textDOM.style.color = '#76574B';
+    textDOM.style.width = '76vw';
+    // textDOM.style.fontSize = '1.4em';
 }
 
 setInterval(randomGreeting, 2000);
+
+let slideIndex = [1,1,1,1,1, 1, 1, 1];
+let slideId = ["mySlides", "mySlides2", "mySlides3", "mySlides4", "mySlides5", "mySlides6", "mySlides7", "mySlides8"]
+showSlides(1, 0);
+showSlides(1, 1);
+showSlides(1,2);
+showSlides(1,3);
+showSlides(1,4);
+showSlides(1,5);
+showSlides(1,6);
+showSlides(1,7);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  let i;
+  let x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
+}
