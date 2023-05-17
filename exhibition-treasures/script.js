@@ -44,7 +44,7 @@ if (getCookie('labelCount')==''){
 
 const sketch = (p) => {
     p.preload = () => {
-        myFont = p.loadFont('font-corgar/CormorantGaramond-Medium.ttf');
+        // myFont = p.loadFont('font-corgar/CormorantGaramond-Medium.ttf');
         if (getCookie('photoCount') == ''){
             console.log('no photos to load');
         } else {
@@ -65,7 +65,7 @@ const sketch = (p) => {
     p.setup = () => {
         myCanvas = p.createCanvas(1200,1200);
         // const ctx = myCanvas.getContext('2d', {willReadFrequently: true});
-        p.textFont(myFont);
+        // p.textFont(myFont);
         //p.background('black');
         if (photosTaken==false){
             capture = p.createCapture(p.VIDEO);
