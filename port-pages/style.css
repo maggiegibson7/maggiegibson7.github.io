@@ -33,7 +33,7 @@ html {
     font-family: AlpinaItalic;
     font-size: 1.6em;
     font-weight: 400;
-    line-height: 1em;
+    line-height: 1.2em;
     padding: 0;
     margin: 0;
   }
@@ -53,7 +53,7 @@ html {
   #title {
     position: fixed;
     left: 10px;
-    top: 10px;
+    top: 11px;
   }
   #navigation {
     position: fixed;
@@ -104,7 +104,7 @@ html {
     color: black;
     width: 24vw;
     left: 10px;
-    top: 5.5vh;
+    top: 6.5vh;
   }
   
   #sidebar {
@@ -332,4 +332,27 @@ html {
   
   .one-pixel {
     height: 2px;
+  }
+
+  #final-links {
+    display: inline-block;
+    color: black;
+    font-family: NeueHaas;
+    /* margin: 5px; */
+    
+  }
+
+  #final-links a{
+    color: black;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  #final-links a:hover {
+    transform: translate(5px);
+  }
+
+  a {
+    font-family: NeueHaas;
+    color: black;
   }
