@@ -1,0 +1,335 @@
+html {
+    color: black ;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  
+  
+  @font-face {
+    font-family: AlpinaItalic;
+    src: url(/fonts-port/PPEditorialNew-Italic.otf);
+  }
+  
+  @font-face {
+    font-family: NeueHaas;
+    src: url(/fonts-port/NHaasGroteskTXPro-55Rg.ttf);
+  }
+  h1 {
+    font-family: AlpinaItalic;
+    font-size: 5em;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+  }
+  h2 {
+    font-family: AlpinaItalic;
+    font-size: 1.6em;
+    font-weight: 400;
+    line-height: 1em;
+    padding: 0;
+    margin: 0;
+  }
+  h3 {
+    font-weight: 200;
+    font-family: NeueHaas;
+  }
+  
+  p {
+    font-size: 1em;
+    font-family: NeueHaas;
+    font-weight: 200;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #title {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+  }
+  #navigation {
+    position: fixed;
+    top: 35vh;
+  }
+  
+  li a {
+    display: block;
+    padding-bottom: 10px;
+    margin-left: 10px;
+    font-family: NeueHaas;
+    color: black;
+    /* text-decoration: none; */
+    /* font-size: 1.4em; */
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1.1em;
+  }
+  
+  
+  #navigation a:hover {
+    /* text-shadow: 0 0 5px #FAF1EF ;
+    transform: translate(10px); */
+    transform: translate(5px);
+    cursor: pointer;
+  }
+  
+  
+  #image-right {
+    position: fixed;
+    width: 13vw;
+    left: 5px;
+    bottom: 5px;
+    z-index: 20;
+  }
+  
+  #image-right img {
+    width: 3vw;
+    height: auto;
+  }
+  
+  #block {
+    position: fixed;
+    color: black;
+    width: 24vw;
+    left: 10px;
+    top: 5.5vh;
+  }
+  
+  #sidebar {
+    position: fixed;
+    height: 100%;
+    width: 25vw;
+    background-color:white;
+  }
+  
+  .wrapper {
+    left: 25vw;
+    position: absolute;
+    top: 10px;
+  }
+  
+  img {
+    height: 59vh;
+    margin-right: 10px;
+  }
+  
+  .spacer {
+    height: 15vh;
+  }
+  
+  .ctd {
+    width: 25vw;
+    /* position: absolute; */
+    /* margin-top: 60vh; */
+  }
+  
+  .view-more button{
+    /* position: absolute; */
+    /* border: 1px solid #76574B;
+    text-align: center; */
+    /* width: 15%; */
+    /* margin-top: -4vh; */
+    /* margin-left: 84%; */
+    /* margin-top: 5vh; */
+    font-size: 1em;
+    font-family: NeueHaas;
+    background-color: transparent;
+    /* color: #76574B; */
+    text-decoration: none;
+    padding-top: 10px;
+    padding-left: 0;
+    border: none;
+    /* padding: 0; */
+    
+  }
+  
+  .view-more a {
+    /* color:#76574B; */
+    /* text-decoration: none; */
+    /* border-bottom: 2px solid #76574B; */
+    /* display: inline-block; */
+    /* line-height: 0.8em; */
+    /* text-decoration: none; */
+    color: black;
+  }
+  
+  .view-more button:hover {
+    /* text-shadow: 0 0 5px #76574B; */
+    /* background-color: #76574B; */
+    /* color: #FAF1EF ; */
+    cursor: pointer;
+    transform: translate(5px);
+  }
+  #random-stuff {
+    /* background-color: red; */
+    position: fixed;
+    height: 3vh;
+    width: 73vw;
+    left: 10px;
+    bottom: 10px;
+    overflow: hidden;
+  }
+  
+  .category {
+    /* position: absolute; */
+    /* top: 48vh; */
+    /* border-bottom: 1px solid black; */
+    padding-bottom: 10px;
+  }
+  
+  .scoot{
+    animation: scoochie 2s ease-in-out;
+    animation-iteration-count: 1;
+  }
+  
+  @keyframes scoochie {
+    0%{opacity: 0; translate: transformY(5px)}
+    25% {opacity: 0.25; translate: transformY(10px)}
+    50% {opacity: 0.5; translate: transformY(15px)}
+    75% {opacity: 0.75; translate: transformY(20px)}
+    100% {opacity: 1; translate: transformY(25px)}
+  }
+  
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border: 1px solid black;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: black;
+    width: 20px;
+  }
+  
+  
+  .little-spacer {
+    height: 1.5vh;
+  }
+  
+  #home-about {
+    position: fixed;
+    right: 5px;
+  }
+  
+  
+  #scroll-top {
+    background: none;
+    border: none;
+    color: black;
+    text-decoration: underline;
+    font-size: 1em;
+    font-family: NeueHaas;
+    padding-bottom: 10px;
+  }
+  
+  .slideshow-container {
+    /* position: absolute; */
+    width: 47vw;
+    height: 50vh;
+    overflow: hidden;
+    /* margin-left: 36vw; */
+    /* margin-top: -16vh; */
+    /* background-color: #76574B; */
+    /* margin-bottom: 30vh; */
+    border: solid 1px black;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .prev {
+    position: absolute;
+    font-size: 3.3em;
+    font-weight: 100;
+    color:black;
+    z-index: 100;
+    /* background-color: red; */
+    margin-top: -.5vh;
+    /* border: 1px solid black;
+    border-radius: 30%;
+    padding: 5px;
+    height: 3vh; */
+    /* text-shadow: 0 0 10px #76574B; */
+  }
+  
+  .next {
+    position: absolute;
+    font-size: 3.3em;
+    color:black;
+    z-index: 100;
+    /* background-color: red; */
+    margin-top: -.5vh;
+    margin-left: 44vw;
+    /* text-shadow: 0 0 10px #76574B; */
+  }
+  
+  .prev:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+  
+  .next:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+  
+  .mySlides, .mySlides2,  .mySlides3, .mySlides4, .mySlides5, .mySlides6, .mySlides7, .mySlides8, .mySlides9, .mySlides10 {
+    width: 47vw;
+    height: 50vh;
+    object-fit: contain;
+    display: none;
+    padding: 0;
+    margin: 0;
+    /* position: absolute; */
+  }
+  
+  .text-info {
+    width: 25vw;
+    /* background-color: green; */
+  }
+  
+  .item {
+    height: 50vh;
+    /* padding: 0; */
+    /* padding: 2px; */
+    border: 1px solid transparent;
+    padding: 1px;
+  }
+  
+  .slideshows {
+    height: 100%;
+    width: 47vw;
+    left: 26vw;
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  .full {
+    width: 47vw;
+    height: 50vh;
+    object-fit: contain;
+    padding: 0;
+    margin: 0;
+    border: solid 1px black;
+  }
+  
+  .one-pixel {
+    height: 2px;
+  }
