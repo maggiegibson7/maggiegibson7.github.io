@@ -377,3 +377,145 @@ img {
 #descr {
   margin-top: 5px;
 }
+
+@media screen and (max-width: 800px) {
+  #sidebar {
+    width: 100vw;
+    position: fixed;
+    background: white;
+    z-index: 500;
+    height: 15vh;
+    
+  }
+  #navigation {
+    width: 100vw;
+    /* height: 21vh;
+    border-bottom: solid 1px black; */
+  }
+  #block {
+    width: 100vw;
+  }
+  li {
+    display: inline;
+    float: left;
+    /* left: 10px; */
+    margin-left: 10px;
+    /* position: absolute; */
+    margin-right: 10px;
+    /* padding: 10px; */
+  }
+  ul {
+    display: inline;
+    position: fixed;
+    /* left: 10px; */
+    top: 14vh;
+    width: 100%;
+    border-bottom: solid 1px black;
+    padding-bottom: 5px;
+    background-color: white;
+  }
+  li a {
+    display: inline;
+  }
+
+  .wrapper {
+    /* position: fixed; */
+    width: 100vw;
+    /* height: 75vh; */
+    overflow-y: scroll;
+    top: 26vh;
+    left: 10px;
+    margin-top: 5px;
+  }
+
+  #date {
+    width: 94vw;
+  }
+
+  #descr {
+    width: 94vw;
+  }
+
+  .row {
+    top: 70vh;
+    /* position: fixed; */
+    /* height: 40vh; */
+    width: 94vw;
+    left: 10px;
+    /* overflow-y: scroll; */
+  }
+
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .text-info {
+    position: absolute;
+    width: 100vw;
+    margin-top: 5px;
+    /* left: 10px; */
+    top: 31vh;
+  }
+
+  .item {
+    width: 94vw;
+    height: 30vh;
+    /* overflow: hidden; */
+    padding-top: 5px;
+    /* background-color: red; */
+    /* margin-top: 3px; */
+  }
+
+  .ctd {
+    width: 94vw;
+    display: none;
+  }
+
+  .slideshows {
+    position: absolute;
+    width: 98vw;
+    left: 0;
+    /* top: 35vh; */
+    top: 5px;
+  }
+
+  .slideshow-container {
+    width: 94vw;
+    height: 30vh;
+    /* margin-top: 20vh; */
+    /* background-color: green; */
+    
+  }
+  .spacer {
+    height: 30vh;
+  }
+
+  .mySlides, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6, .mySlides7, .mySlides8, .mySlides9, .mySlides10 {
+    width: 94vw;
+    height: 30vh;
+  }
+
+  .next {
+    margin-left: 80vw;
+  }
+
+  #random-greeting {
+    display: none;
+  }
+
+  #random-stuff {
+    display: none;
+  }
+
+  .full {
+    width: 94vw;
+    height: 30vh;
+    /* margin-top: 5vh; */
+    margin-bottom: 20vh;
+    /* top: 20vh; */
+  }
+  .one-pixel {
+    height: 20vh;
+  }
+}
